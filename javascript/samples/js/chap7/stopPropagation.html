@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Eventオブジェクト</title>
+<script type="text/javascript" src="listener.js"></script>
+<script type="text/javascript">
+<!--
+function cancelBubbling(e) {
+  if (e.stopPropagation) {
+    e.stopPropagation();
+  } else if (window.event) {
+    window.event.cancelBubble = true;
+  }
+}
+
+addListener(window, 'load', init);
+
+function init() {
+	addListener(document.getElementById('outer'), 'click', function(e) {
+		window.alert("上位要素のイベントリスナです。");
+	});
+	addListener(document.getElementById('inner'), 'click', function(e) {
+		window.alert("下位要素のイベントリスナです。");
+		cancelBubbling(e);
+	});
+}
+//-->
+</script>
+</head>
+<body>
+<div id="outer">
+	<div id="inner">
+		クリックしてみましょう。
+	</div>
+</div>
+</body>
+</html>

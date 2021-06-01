@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>プライベートメンバ</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+<!--
+function Triangle() {
+  var _base;
+  var _height;
+  var _checkArgs = function(val) {
+    return (!isNaN(val) && val > 0);
+  }
+  this.setBase = function(base) {
+    if(_checkArgs(base)){_base = base;}
+  }
+  this.setHeight = function(height) {
+    if(_checkArgs(height)){_height = height;}
+  }
+  this.getBase = function() { return _base; }
+  this.getHeight = function() { return _height; }
+}
+
+Triangle.prototype.getArea = function() {
+  return this.getBase() * this.getHeight() / 2;
+}
+
+var t = new Triangle();
+t._base = 10;
+t._height = 2;
+document.writeln('三角形の面積：' + t.getArea());
+t.setBase(10);
+t.setHeight(2);
+document.writeln('三角形の底辺：' + t.getBase());
+document.writeln('三角形の高さ：' + t.getHeight());
+document.writeln('三角形の面積：' + t.getArea());
+//-->
+</script>
+</pre>
+</body>
+</html>

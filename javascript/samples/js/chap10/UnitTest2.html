@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./jsunit/app/jsUnitCore.js"></script>
+<script type="text/javascript" src="MyArea.js"></script>
+<script type="text/javascript">
+var area;
+
+function setUp() {
+  area = new MyArea(10, 5);
+}
+
+function tearDown() { }
+
+function testTriangle() {
+  warn('テスト');
+  var result = area.getTriangle();
+  var expected = 50;
+  assertEquals('getTriangle正常テスト', expected, result);
+}
+
+function testSquare() {
+  var result = area.getSquare();
+  var expected = 100;
+  assertEquals('getSquare正常テスト', expected, result);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

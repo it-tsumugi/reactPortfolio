@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>高階関数</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+<!--
+function arrayWalk(data, f) {
+	for (var key in data) {
+		f(key, data[key]);
+	}
+}
+
+var result= 0;
+function sumElement(key, value) {
+	result += value;
+}
+
+var ary = [1, 2, 4, 8, 16];
+arrayWalk(ary, sumElement);
+document.writeln('合計値：' + result);
+//-->
+</script>
+</pre>
+</body>
+</html>

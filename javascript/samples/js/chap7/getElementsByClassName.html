@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ダイレクトアクセス</title>
+<script type="text/javascript">
+<!--
+window.onload = function() {
+  var result = [];
+  var list = document.getElementsByClassName('my');
+  for(var i = 0; i < list.length; i++){
+    result.push(list.item(i).href);
+  }
+  window.alert(result.join('\n'));
+}
+//-->
+</script>
+</head>
+<body>
+<a href="http://www.wings.msn.to/" class="my">サーバサイド技術の学び舎 - WINGS</a><br />
+<a href="http://www.web-deli.com/" class="my">WebDeli</a><br />
+<a href="http://www.atmarkit.co.jp/fdotnet/ajaxjs/index/">Ajax時代のJavaScriptプログラミング再入門</a>
+</body>
+</html>

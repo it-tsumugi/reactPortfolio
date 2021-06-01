@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>プロトタイプチェーン</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+<!--
+var Animal = function() {}
+
+Animal.prototype = {
+	walk : function() { document.writeln('トコトコ...'); }
+};
+
+var Dog = function() {};
+Dog.prototype = new Animal();
+
+Dog.prototype.bark = function() { document.writeln('ワンワン！'); }
+
+var d = new Dog();
+d.walk();
+d.bark();
+//-->
+</script>
+</pre>
+</body>
+</html>

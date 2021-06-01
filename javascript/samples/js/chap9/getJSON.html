@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSONP</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+<!--
+$(function() {
+	$('#disp').click(function() {
+		$.getJSON(
+			'http://b.hatena.ne.jp/entry/jsonlite/?callback=?',
+			{ url: $('#url').val() },
+			function(data) {
+				$('#count').html(data.count);
+				for (var i = 0; i < data.bookmarks.length; i++) {
+					var bm = data.bookmarks[i];
+					$('#result').append(
+						$('<li></li>').append(
+							$('<a></a>')
+								.attr('href', 'http://b.hatena.ne.jp/' + bm.user)
+								.html(bm.user + ' ' + bm.timestamp)
+						)
+					);
+				}
+			}
+		);
+	});
+});
+//-->
+</script>
+</head>
+<body>
+<form name="fm">
+<label>URL：
+	<input type="text" id="url" name="url" size="50"
+		value="http://www.wings.msn.to/" /></label>
+<input type="button" id="disp" value="検索" />
+</form>
+<hr />
+<span id="count">-</span>件、ブックマークされています。
+<ul id="result"></ul>
+</body>
+</html>

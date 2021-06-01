@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>attributesプロパティ</title>
+<script type="text/javascript">
+<!--
+window.onload = function() {
+	var logo = document.getElementById('logo');
+	var attrs = logo.attributes;
+	var result = [];
+	for (var i = 0; i < attrs.length; i++) {
+		var attr = attrs.item(i);
+		if (attr.nodeValue) {
+			result.push(attr.nodeName + ':' + attr.nodeValue);
+		}
+	}
+	window.alert(result.join('\r\n'));
+}
+//-->
+</script>
+</head>
+<body>
+<img id="logo" src="http://www.wings.msn.to/image/wings.jpg"
+	height="67" width="215" border="0"
+	alt="WINGS（Www INtegrated Guide on Server-architecture）" />
+</body>
+</html>

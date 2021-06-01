@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documentオブジェクト</title>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+function setCookie(name, value, expires, domain, path, secure){
+	var c = '';
+	c += name + '=' + encodeURIComponent(value);
+	if(expires){
+		var exp = new Date();
+		exp.setDate(exp.getDate() + expires);
+		c += '; expires=' + exp.toGMTString();
+	}
+	if(domain){ c += '; domain=' + domain; }
+	if(path)	{ c += '; path=' + path; }
+	if(secure){ c += '; secure'; }
+	document.cookie = c;
+}
+
+function getCookie(name){
+	var cs = document.cookie.split(';');
+	for(var i = 0; i < cs.length; i++){
+		var kv = cs[i].split('=');
+		if(kv[0] == name){ return decodeURIComponent(kv[1]); }
+	}
+	return null;
+}
+
+var cnt = getCookie('js_cnt');
+cnt = cnt ? ++cnt : 1;
+setCookie('js_cnt', cnt, 90);
+document.write('あなたはこのサイトに' + cnt + '回、アクセスしました。');
+//-->
+</script>
+</body>
+</html>

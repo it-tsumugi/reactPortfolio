@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>要素の操作</title>
+</head>
+<body>
+<div id="cur">自分</div>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+<!--
+$('#cur')
+	.css('background-color', 'Orange')
+	.prepend('<div>兄</div>')
+	.append('<div>弟</div>')
+	.before('<div>前方</div>')
+	.after('<div>後方</div>')
+	.wrap('<strong></strong>');
+/*
+$('#cur').css('background-color', 'Orange');
+$('<div>兄</div>').prependTo('#cur');
+$('<div>弟</div>').appendTo('#cur');
+$('<div>前方</div>').insertBefore('#cur');
+$('<div>後方</div>').insertAfter('#cur');
+$('#cur').wrap('<strong></strong>');
+*/
+
+// -->
+</script>
+</body>
+</html>

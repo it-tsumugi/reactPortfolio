@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery</title>
+</head>
+<body>
+<select id="books">
+	<option value="apache">Apacheポケットリファレンス</option>
+	<option value="mysql">3ステップでしっかり学ぶMySQL入門</option>
+	<option value="php">改訂3版 基礎PHP</option>
+	<option value="vs">Visual Studio 2010スタートアップガイド</option>
+</select>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+<!--
+$('<option></option>')
+	.attr('value', 'js_master')
+	.text('JavaScript本格入門')
+	.css('background-color', '#FFff00')
+	.appendTo('#books');
+
+/*var opt = $('<option></option>');
+opt.attr('value', 'js_master');
+opt.text('JavaScript本格入門');
+opt.css('background-color', '#FFff00');
+opt.appendTo('#books');*/
+
+//-->
+</script>
+</body>
+</html>

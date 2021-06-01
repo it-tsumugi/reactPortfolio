@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ユーティリティ</title>
+</head>
+<body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+  var obj = {
+    name: '山田祥寛',
+    greet: function() {
+      window.alert('こんにちは、' + this.name + 'さん！');
+    }
+  };
+  $('#btn').click(obj.greet);
+  //$('#btn').click($.proxy(obj.greet, obj));
+  //$('#btn').click($.proxy(obj,'greet'));
+});
+</script>
+  ...中略...
+<input type="button" id="btn" value="表示" /></body>
+</html>

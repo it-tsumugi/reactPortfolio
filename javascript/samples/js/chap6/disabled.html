@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formオブジェクト</title>
+<script type="text/javascript">
+<!--
+function process(){
+	var fmt = document.fm.fmt;
+	for(var i = 0; i < fmt.length; i++){
+		fmt[i].disabled = !document.fm.need.checked;
+	}
+}
+//-->
+</script>
+</head>
+<body>
+<form name="fm">
+  <label>
+    メールニュースの送信を希望：
+    <input type="checkbox" name="need" value="1"
+      checked="checked" onclick="process()" />
+  </label>
+  <br />
+  <label><input type="radio" name="fmt" value="plain" />プレーン形式</label>
+  <label><input type="radio" name="fmt" value="html" />HTML形式</label>
+</form>
+</body>
+</html>

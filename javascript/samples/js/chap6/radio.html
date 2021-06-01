@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Windowオブジェクト</title>
+<script type="text/javascript">
+<!--
+function getRadio(elem){
+	var result = '';
+	for(var i = 0; i < elem.length; i++){
+		if (elem[i].checked){
+			result = elem[i].value;
+			break;
+		}
+	}
+	return result;
+}
+
+function show(){
+	window.alert(getRadio(document.fm.food));
+	return false;
+}
+//-->
+</script>
+
+</head>
+<body>
+<form name="fm" method="POST" action="" onsubmit="return show()">
+	一番好きな食べ物は？：
+	<label><input type="radio" name="food" value="ラーメン" />ラーメン</label>
+	<label><input type="radio" name="food" value="餃子" />餃子</label>
+	<label><input type="radio" name="food" value="焼き肉" />焼き肉</label>
+	<input type="submit" value="送信" />
+</form>
+</body>
+</html>

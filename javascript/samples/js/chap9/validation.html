@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>jQuery Validationプラグイン</title>
+<style type="text/css">
+.valid-error { color: Red; }
+</style>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$.validator.addMethod('regex',
+		function(value, element, param) {
+			var r = new RegExp('^' + param + '$', 'gi');
+			return r.test(value);
+		},
+		'入力値が不正な形式です。'
+	);
+
+	$('#fm').validate({
+		errorClass : 'valid-error',
+		rules : {
+			'isbn': { required : true,
+				regex : '978-4-[0-9]{2,5}-[0-9]{2,5}-[0-9A-Z]{1}' },
+			'title' : { required : true },
+			'price' : { range : [1000, 10000] },
+			'publish' : { maxlength : 30 },
+			'published' : { dateISO : true }
+		},
+		messages : {
+			'isbn' : { 
+				required: 'ISBNコードは必須です。',
+				regex: 'ISBNコードの形式が不正です。'
+			},
+			'title' : {
+				required : '書名は必須です。'
+			},
+			'price' : {
+				range : jQuery.format('価格は{0}～{1}の範囲で入力してください。')
+			},
+			'publish' : {
+				maxlength : jQuery.format('出版社は{0}文字以内で入力してください。')
+			}, 
+			'published' : {
+				dateISO : '日付の形式が不正です。'
+			}
+		}
+	});
+});
+</script>
+</head>
+<body>
+<form id="fm">
+<label>ISBNコード：
+	<input type="text" id="isbn" name="isbn" size="25" /></label><br/>
+<label>書名：
+	<input type="text" id="title" name="title" size="50" /></label><br/>
+<label>価格：
+	<input type="text" id="price" name="price" size="5" /></label><br/>
+<label>出版社：
+	<input type="text" id="publish" name="publish" size="15" /></label><br/>
+<label>配本日：
+	<input type="text" id="published" name="published" size="15" /></label><br/>
+<input type="submit" value="登録" />
+</form>
+</body>
+</html>

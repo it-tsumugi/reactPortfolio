@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>イベントリスナの削除</title>
+<script type="text/javascript">
+<!--
+function addListener(elem, ev, listener) {
+	if(elem.addEventListener) {
+		elem.addEventListener(ev, listener, false);
+	} else if(elem.attachEvent) {
+		elem.attachEvent('on' + ev, listener);
+	} else {
+		throw new Error('イベントリスナに未対応です。');
+	}
+}
+
+function removeListener(elem, ev, listener) {
+	if(elem.removeEventListener) {
+		elem.removeEventListener(ev, listener, false);
+	} else if(elem.detachEvent) {
+		elem.detachEvent('on' + ev, listener);
+	} else {
+		throw new Error('イベントリスナに未対応です。');
+	}
+}
+
+addListener(window, 'load', init);
+
+function init() {
+	addListener(document.getElementById('btn'), 'click', btn_click);
+	addListener(document.getElementById('btnRemove'), 'click', btnRemove_click);
+}
+
+function btn_click() {
+	window.alert('ボタンがクリックされました。');
+}
+
+function btnRemove_click() {
+	removeListener(document.getElementById('btn'), 'click', btn_click);
+}
+
+//-->
+</script>
+</head>
+<body>
+<input type="button" id='btn' value="ダイアログ表示" />
+<input type="button" id='btnRemove' value="イベントリスナ削除" />
+</body>
+</html>

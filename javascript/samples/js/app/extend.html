@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>コア機能</title>
+</head>
+<body>
+<form>
+<input type="text" value="こんにちは、赤ちゃん！" size="20" />
+<input type="text" value="jQueryの基本" size="20" />
+</form>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+<!--
+$.fn.extend({
+  clearValue : function() {
+    return this.each(function() { this.value = ''; });
+  }
+});
+$(':text').clearValue();
+
+$.extend({
+  triangle: function(base, height) { return base * height / 2; }
+});
+document.writeln($.triangle(10, 2));
+// -->
+</script>
+</body>
+</html>

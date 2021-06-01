@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>イベント</title>
+</head>
+<body>
+<form>
+	<input type="submit" value="送信" />
+	<p id="c">クリックしてください。</p>
+</form>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+<!--
+$('form').submit(
+	function(e, param1, param2){ window.alert(param1 + param2); } );
+$('#c').click(function() {
+		$('form').trigger('submit', ['名無しの', '権兵衛']);
+	});
+// -->
+</script>
+</body>
+</html>

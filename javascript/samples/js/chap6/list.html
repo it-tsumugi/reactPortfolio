@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formオブジェクト</title>
+<script type="text/javascript">
+<!--
+function getList(elem){
+	var result = '';
+	for(var i = 0; i < elem.options.length; i++){
+		if(elem.options[i].selected){
+			result += elem.options[i].value + ',';
+		}
+	}
+	return result;
+}
+
+function show(){
+	window.alert(getList(document.fm.food));
+	return false;
+}
+//-->
+</script>
+</head>
+<body>
+<form name="fm" onsubmit="return show()">
+	一番好きな食べ物は？：
+	<select name="food" multiple="multiple" size="4">
+		<option value="ラーメン">ラーメン</option>
+		<option value="餃子">餃子</option>
+		<option value="焼き肉">焼き肉</option>
+		<option value="蕎麦">蕎麦</option>
+		<option value="ピザ">ピザ</option>
+		<option value="うどん">うどん</option>
+	</select>
+	<input type="submit" value="送信" />
+</form>
+</body>
+</html>

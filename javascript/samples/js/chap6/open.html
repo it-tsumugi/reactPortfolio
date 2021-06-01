@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Windowオブジェクト</title>
+<script type="text/javascript">
+<!--
+var subwin;
+
+function win_open(){
+	subwin = window.open('http://www.wings.msn.to/', 'Sample',
+		'width=600, height=300, scrollbars=yes, location=yes');
+}
+
+function win_close(){
+	if(subwin && !subwin.closed){
+		subwin.close();
+	}
+}
+//-->
+</script>
+</head>
+<body>
+<input type="button" value="サブウィンドウを開く" onclick="win_open()" />
+<input type="button" value="サブウィンドウを閉じる" onclick="win_close()" />
+</body>
+</html>

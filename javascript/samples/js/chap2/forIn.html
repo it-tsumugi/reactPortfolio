@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>for...in命令</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+<!--
+var member = ['山田','鈴木','佐藤'];
+for (var i in member) {
+	document.writeln('名前は'+ member[i]);
+}
+
+var triangle = {width : 30, height : 50};
+for (var j in triangle) {
+	document.writeln(j + '=' + triangle[j]);
+}
+
+var book = new Object();
+book.title = 'JavaScriptリファレンス';
+book.publish = '技術評論社';
+book.price = '3000';
+for (var k in book) {
+	document.writeln(k + 'は' + book[k]);
+}
+//-->
+</script>
+</pre>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>try...catch...finally命令</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+<!--
+var x = 1;
+var y = 0;
+try{
+	if(y == 0) { throw new Error('0で除算しようとしました。'); }
+	var z = x / y;
+} catch(e) {
+	document.writeln(e.message);
+}//-->
+</script>
+</pre>
+</body>
+</html>

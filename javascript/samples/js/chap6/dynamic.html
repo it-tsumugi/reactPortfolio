@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formオブジェクト</title>
+<script type="text/javascript">
+<!--
+function process(){
+	var result = '';
+	for(var i = 0; i<document.fm.elements.length; i++){
+		result += document.fm.elements[i].name + '\n';
+	}
+	window.alert(result);
+	return false;
+}
+//-->
+</script>
+</head>
+<body>
+<form name="fm" onsubmit="return process()">
+<label>name1：
+  <input type="text" name="name1" size="10" /></label><br />
+<label>name2：
+  <input type="text" name="name2" size="10" /></label><br />
+<label>name3：
+  <input type="text" name="name3" size="10" /></label><br />
+<input type="submit" value=" 送信" />
+</body>
+</html>

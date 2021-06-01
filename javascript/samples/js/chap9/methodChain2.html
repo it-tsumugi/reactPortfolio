@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery</title>
+</head>
+<body>
+<select id="books">
+	<option class="apache">Apacheポケットリファレンス</option>
+	<option class="php">改訂3版 基礎PHP</option>
+	<option class="mysql">3ステップでしっかり学ぶMySQL入門</option>
+	<option class="php">独習PHP 第2版</option>
+	<option class="mysql">MySQLで学ぶデータベース超入門</option>
+</select>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+<!--
+$('#books').
+	find('option.apache').css('backgroundColor', '#ffff00').end().
+	find('option.php').css('backgroundColor', '#66ccff').end().
+	find('option.mysql').css('backgroundColor', '#ccffcc');
+//-->
+</script>
+</body>
+</html>
