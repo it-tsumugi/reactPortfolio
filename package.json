@@ -1,6 +1,6 @@
 {
-  "homepage": "https://it-tsumugi.github.io/it-tsumugi.github.io/",
-  "name": "react-portfolio",
+  "homepage": "https://it-tsumugi.github.io/react_portfolio/",
+  "name": "react_portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,12 +13,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
