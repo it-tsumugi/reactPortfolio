@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-      Hello, world!
+      更新されるかの確認
     </div>
   );
 }
