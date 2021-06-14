@@ -1,7 +1,19 @@
+import {BrowserRouter, Link} from "react-router-dom";
+
+import Home from "./component/pages/Home";
+import Profile from "./component/pages/Profile";
+import Skill from "./component/pages/Skill";
+import Product from "./component/pages/Product";
+import Contact from "./component/pages/Contact";
+
 function App() {
   return (
     <div className="App">
-      更新されるかの確認
+      <Home />
+      <Profile />
+      <Skill />
+      <Product />
+      <Contact />
     </div>
   );
 }
