@@ -1,4 +1,5 @@
 import {BrowserRouter, Link, Switch, Route} from "react-router-dom";
+import styled from 'styled-components';
 
 import {Home} from "./component/pages/Home";
 import {Profile} from "./component/pages/Profile";
@@ -10,9 +11,9 @@ import { Book } from "./component/pages/Book";
 export const Path = {
   home: "/component/pages/Home",
   profile: "/component/pages/Profile",
-  skill: "/component/pages/Skill",
+  skill: "/compos/Skill",
   product: "/component/pages/Product",
-  book: "/component/pages/Book",
+  book: "/component/pagnent/pagees/Book",
   contact: "/component/pages/Contact",
 };
 
