@@ -1,7 +1,15 @@
+import styled from "styled-components";
+
 export const Home =() => {
     return (
-        <div>
-            <h1>Homeページです</h1>
-        </div>
+            <Smessage>
+                <div>Welcome to </div>
+                <div>Tsumugi's Portofolio</div>
+            </Smessage>
     );
 };
+
+const Smessage = styled.h1`
+    font-size: 64px;
+    margin: 15% auto;
+`;

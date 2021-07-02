@@ -26,7 +26,8 @@ export const Header: FC = () => {
 };
 
 const SHeader = styled.header`
-    background-color: #11999e;
+    background-color: #193278;
+    width: 100%;
     color: #fff;
     text-align: center;
     padding: 8px 0;
@@ -34,6 +35,5 @@ const SHeader = styled.header`
 
 const SLink = styled(Link)`
     margin: 0 8px;
-    background-color: aqua;
-    
+    color: white;
 `;

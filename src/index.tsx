@@ -4,16 +4,17 @@ import styled from "styled-components";
 import {App} from './App';
 
 const SApp = styled.div`
-  background-color: #e4f9f5;
-  margin: 0;
+  background-color: #294286;
+  text-align: center;
+  color: white;
   min-height: 100vh;
 `;
 
 ReactDOM.render(
   <React.StrictMode>
-   {/* <SApp>*/}
-     <App />
-    {/*</SApp>*/}
+    <SApp>
+      <App />
+    </SApp>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
