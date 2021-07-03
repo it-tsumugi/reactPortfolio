@@ -21,7 +21,7 @@ export const Path = {
 
 export const ComponentRouter:FC = () =>{
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path={Path.home}>
             <DefaultLayout>
