@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import hinako from "../../assets/images/hinako.jpg";
+import monsterBall from "../../assets/images/monsterBall.jpg";
 
 export const Home = () => {
   const name = "つむぎ";
   return (
     <SContainer>
-      <SImg height={160} width={160} src={hinako} alt={name} />
+      <SImg height={160} width={160} src={monsterBall} alt={name} />
       <SName>{name}</SName>
       <Smessage>
         <div>Welcome to </div>

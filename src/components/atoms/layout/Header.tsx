@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import React,{FC} from "react";
-import { Link } from "react-router-dom";
+import {VFC, } from "react";
+import { Link, useHistory} from "react-router-dom";
 
 import { Tab, Tabs, AppBar } from "@material-ui/core";
 
@@ -42,18 +42,13 @@ const headerItem: headerItemPropsType[] = [
   },
 ];
 
-export const Header: FC = () => {
-  const [value, setValue] = React.useState(0);
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
-  };
+export const Header: VFC = () => {
+  const history = useHistory();
   return (
       <SAppBar position="static" color="inherit">
-        {/*ここがあやしい */}
         <Tabs
-          value={value}
+          value={history.location.pathname}
           variant="fullWidth"
-          onChange={handleChange}
           indicatorColor="secondary"
           centered
           aria-label="simple tabs example"
