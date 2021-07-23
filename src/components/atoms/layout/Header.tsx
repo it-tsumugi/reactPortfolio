@@ -1,15 +1,16 @@
 import styled from "styled-components";
-import {VFC, } from "react";
-import { Link, useHistory} from "react-router-dom";
+import { VFC } from "react";
+import { Link, useHistory } from "react-router-dom";
 
 import { Tab, Tabs, AppBar } from "@material-ui/core";
 
-interface headerItemPropsType{
-  id: number; 
-  route: string; 
-  label: string 
+interface headerItemType {
+  id: number;
+  route: string;
+  label: string;
 }
-const headerItem: headerItemPropsType[] = [
+
+const headerItem: headerItemType[] = [
   {
     id: 1,
     route: "/",
@@ -45,27 +46,27 @@ const headerItem: headerItemPropsType[] = [
 export const Header: VFC = () => {
   const history = useHistory();
   return (
-      <SAppBar position="static" color="inherit">
-        <Tabs
-          value={history.location.pathname}
-          variant="fullWidth"
-          indicatorColor="secondary"
-          centered
-          aria-label="simple tabs example"
-        >
-          {headerItem.map((val) => {
-            return (
-              <Tab
-                label={val.label}
-                value={val.route}
-                key={val.id}
-                component={Link}
-                to={val.route}
-              />
-            );
-          })}
-        </Tabs>
-      </SAppBar>
+    <SAppBar position="static" color="inherit">
+      <Tabs
+        value={history.location.pathname}
+        variant="fullWidth"
+        indicatorColor="secondary"
+        centered
+        aria-label="simple tabs example"
+      >
+        {headerItem.map((val) => {
+          return (
+            <Tab
+              label={val.label}
+              value={val.route}
+              key={val.id}
+              component={Link}
+              to={val.route}
+            />
+          );
+        })}
+      </Tabs>
+    </SAppBar>
   );
 };
 const SAppBar = styled(AppBar)`
