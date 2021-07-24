@@ -1,57 +1,17 @@
 import { useState, VFC } from "react";
 import styled from "styled-components";
 
-import monsterBall from "../../assets/images/monsterBall.jpg";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
 import { DetailButton } from "../atoms/button/DetailButton";
+import { ProgileImage } from "../atoms/image/ProfileImage";
+import { profileItems } from "../atoms/data/profileItems";
+import { eventItems } from "../atoms/data/eventItems";
 
-interface profileItemType {
-  id: number;
-  type: string;
-  content: string;
-  detail: boolean;
-  detailText?: string;
-}
-
-const profileItem: profileItemType[] = [
-  {
-    id: 1,
-    type: "名前",
-    content: "齊藤紡生",
-    detail: false,
-  },
-  {
-    id: 2,
-    type: "所属",
-    content: "三重大学工学研究科情報工学専攻コンピュータアーキテクチャ研究室",
-    detail: true,
-    detailText:
-      "簡単に言うと三重大学の情報工学系の大学院でハードウェア方面に関する研究をしています。",
-  },
-  {
-    id: 3,
-    type: "研究内容",
-    content: "MESI-CUDAを用いたCUDAプログラミングの抽象化",
-    detail: true,
-    detailText:
-      "簡単に言うとGPUでのプログラミングを楽に書ける仕組みを作ろうという研究です。詳しい先行研究の内容はGoogleScolorで調べるといくつか出てきます。",
-  },
-  {
-    id: 4,
-    type: "趣味",
-    content: "プログラミング、ランニング、ゲーム、読書、ギターなど",
-    detail: true,
-    detailText:
-      "高校生の頃初めてC言語に触って以来プログラミングが好きになりました。大学では友達に誘われて競技プログラミングをのんびりやっています。中学、高校、大学と陸上部だったので、走ることは好きです。",
-  },
-  {
-    id: 5,
-    type: "出身",
-    content: "福井県",
-    detail: false,
-  },
-];
-
-const name = "つむぎ";
 export const Profile: VFC = () => {
   const [num, setNum] = useState<number>(0);
   const openClose = (num: number, newNum: number) => {
@@ -60,9 +20,8 @@ export const Profile: VFC = () => {
   };
   return (
     <SContentsWrapper>
-      <SImg height={160} width={160} src={monsterBall} alt={name} />
-      <SName>{name}</SName>
-      {profileItem.map((text) => {
+      <ProgileImage />
+      {profileItems.map((text) => {
         return (
           <SProfileContainer key={text.id}>
             <SOrganismContainer>
@@ -89,6 +48,30 @@ export const Profile: VFC = () => {
           </SProfileContainer>
         );
       })}
+
+      <STimeline>
+        <h1>History</h1>
+        <VerticalTimeline>
+          {eventItems.map((value) => {
+            return (
+              <SVerticalTimelineElement
+                key={value.id}
+                contentStyle={{ background: "#fff", color: "#222" }}
+                contentArrowStyle={{ borderRight: "10px solid  #fff" }}
+                date={value.date}
+                dateClassName={"timelineDate"}
+                iconStyle={{
+                  background: "#193278",
+                }}
+              >
+                <h3>{value.title}</h3>
+                <p>{value.text}</p>
+              </SVerticalTimelineElement>
+            );
+          })}
+        </VerticalTimeline>
+      </STimeline>
+      <SSNS>フッターにGitHub、Twitter、Qiitaのアカウントを載せています。</SSNS>
     </SContentsWrapper>
   );
 };
@@ -124,10 +107,6 @@ const SContent = styled.div`
   font-size: 28px;
 `;
 
-const SImg = styled.img`
-  border-radius: 50%;
-`;
-
 const SUnderLine = styled.div`
   padding: 3px;
   border-bottom: 2px solid #fff;
@@ -161,8 +140,18 @@ const SOrganismContainer = styled.div`
 
 const SHiddenContents = styled.div``;
 
-const SName = styled.p`
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
+const SVerticalTimelineElement = styled(VerticalTimelineElement)`
+  .timelineDate {
+    font-weight: bold;
+    color: white;
+  }
+`;
+
+const STimeline = styled.div`
+  margin: 300px 0 50px;
+`;
+
+const SSNS = styled.div`
+  text-align: center;
+  padding-bottom: 50px;
 `;

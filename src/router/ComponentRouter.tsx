@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { VFC } from "react";
 import { DefaultLayout } from "../components/templates/DefaultLayout";
-import { HeaderOnly } from "../components/templates/HeaderOnly";
 import { Home } from "../components/pages/Home";
 import { Profile } from "../components/pages/Profile";
 import { Skill } from "../components/pages/Skill";
 import { Product } from "../components/pages/Product";
 import { Book } from "../components/pages/study/Book";
 import { Contact } from "../components/pages/Contact";
+import { FooterFixed } from "../components/templates/FooterFixed";
 
 export const Path = {
   home: "/",
@@ -23,34 +23,34 @@ export const ComponentRouter: VFC = () => {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path={Path.home}>
-          <DefaultLayout>
+          <FooterFixed>
             <Home />
-          </DefaultLayout>
+          </FooterFixed>
         </Route>
         <Route path={Path.profile}>
-          <HeaderOnly>
+          <DefaultLayout>
             <Profile />
-          </HeaderOnly>
+          </DefaultLayout>
         </Route>
         <Route path={Path.skill}>
-          <HeaderOnly>
+          <DefaultLayout>
             <Skill />
-          </HeaderOnly>
+          </DefaultLayout>
         </Route>
         <Route path={Path.product}>
-          <HeaderOnly>
+          <DefaultLayout>
             <Product />
-          </HeaderOnly>
+          </DefaultLayout>
         </Route>
         <Route path={Path.study}>
-          <HeaderOnly>
+          <DefaultLayout>
             <Book />
-          </HeaderOnly>
+          </DefaultLayout>
         </Route>
         <Route path={Path.contact}>
-          <HeaderOnly>
+          <DefaultLayout>
             <Contact />
-          </HeaderOnly>
+          </DefaultLayout>
         </Route>
       </Switch>
     </BrowserRouter>

@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import monsterBall from "../../assets/images/monsterBall.jpg";
+import { ProgileImage } from "../atoms/image/ProfileImage";
 
 export const Home = () => {
-  const name = "つむぎ";
   return (
     <SContainer>
-      <SImg height={160} width={160} src={monsterBall} alt={name} />
-      <SName>{name}</SName>
+      <ProgileImage />
       <Smessage>
         <div>Welcome to </div>
         <div>Tsumugi's Portofolio</div>
@@ -16,20 +14,10 @@ export const Home = () => {
 };
 
 const Smessage = styled.h1`
-    font-size: 64px;
-    margin: 10px auto;
+  font-size: 64px;
+  margin: 10px auto;
 `;
 
-const SImg = styled.img`
-    border-radius: 50%;
-` ;
-
-const SName = styled.p`
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-` ;
-
 const SContainer = styled.div`
-    margin: 10%;
-` ;
+  margin: 10%;
+`;

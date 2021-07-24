@@ -12,7 +12,7 @@ export const DefaultLayout: VFC<PropsType> = (props) => {
     <>
       <Header />
       {children}
-      <Footer />
+      <Footer fixed={false} />
     </>
   );
 };

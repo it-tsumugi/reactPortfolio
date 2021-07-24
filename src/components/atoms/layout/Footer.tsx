@@ -1,20 +1,34 @@
 import styled from "styled-components";
-import {FC} from "react";
+import { VFC } from "react";
 
-export const Footer: FC = () =>{
-    return(
-       <SFooter>
-           &copy; 2021 test Inc.
-       </SFooter>
-    );
+import { GitHubIcon } from "../Icon/GitHubIcon";
+import { TwitterIcon } from "../Icon/TwitterIcon";
+import { QiitaIcon } from "../Icon/QiitaIcon";
+
+interface Props {
+  fixed: boolean;
 }
 
-const SFooter = styled.header`
-    background-color: #193278;
-    color: #fff;
-    text-align: center;
-    padding: 8px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+export const Footer: VFC<Props> = (props) => {
+  const { fixed } = props;
+  return (
+    <SFooter fixed={fixed}>
+      &copy; 2021 Tsumugi
+      <GitHubIcon />
+      <TwitterIcon />
+      <QiitaIcon />
+    </SFooter>
+  );
+};
+
+const SFooter = styled.header<{ fixed: boolean }>`
+  background-color: #193278;
+  color: #fff;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+  position: ${({ fixed }) => (fixed ? "fixed" : "false")};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
