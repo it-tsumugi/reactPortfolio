@@ -1,7 +1,8 @@
+import { productItems } from "../../data/productItems";
+import { CardList } from "../organisms/CardList";
+
 export const Product = () => {
-    return (
-        <div>
-            <h1>Productページです</h1>
-        </div>
-    );
+  return (
+    <CardList cardList={productItems} isSkillLevel={false} isUsedTech={true} />
+  );
 };

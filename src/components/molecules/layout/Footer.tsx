@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { VFC } from "react";
 
-import { GitHubIcon } from "../Icon/GitHubIcon";
-import { TwitterIcon } from "../Icon/TwitterIcon";
-import { QiitaIcon } from "../Icon/QiitaIcon";
+import { GitHubIcon } from "../../atoms/icon/GitHubIcon";
+import { TwitterIcon } from "../../atoms/icon/TwitterIcon";
+import { QiitaIcon } from "../../atoms/icon/QiitaIcon";
 
 interface Props {
   fixed: boolean;

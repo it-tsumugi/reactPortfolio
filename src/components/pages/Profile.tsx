@@ -9,8 +9,8 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { DetailButton } from "../atoms/button/DetailButton";
 import { ProgileImage } from "../atoms/image/ProfileImage";
-import { profileItems } from "../atoms/data/profileItems";
-import { eventItems } from "../atoms/data/eventItems";
+import { profileItems } from "../../data/profileItems";
+import { eventItems } from "../../data/eventItems";
 
 export const Profile: VFC = () => {
   const [num, setNum] = useState<number>(0);

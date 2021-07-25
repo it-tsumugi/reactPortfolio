@@ -1,10 +1,10 @@
-interface profileItemsType {
+type profileItemsType = {
   id: number;
   type: string;
   content: string;
   detail: boolean;
   detailText?: string;
-}
+};
 
 export const profileItems: profileItemsType[] = [
   {

@@ -38,9 +38,9 @@ export const ComponentRouter: VFC = () => {
           </DefaultLayout>
         </Route>
         <Route path={Path.product}>
-          <DefaultLayout>
+          <FooterFixed>
             <Product />
-          </DefaultLayout>
+          </FooterFixed>
         </Route>
         <Route path={Path.study}>
           <DefaultLayout>

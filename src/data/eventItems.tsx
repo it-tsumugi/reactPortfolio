@@ -1,9 +1,9 @@
-interface eventItemsType {
+type eventItemsType = {
   id: number;
   date: string;
   title: string;
   text?: string;
-}
+};
 
 export const eventItems: eventItemsType[] = [
   {

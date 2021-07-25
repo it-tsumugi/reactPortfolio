@@ -1,5 +1,5 @@
 import { VFC } from "react";
-import { Footer } from "../atoms/layout/Footer";
+import { Footer } from "../molecules/layout/Footer";
 import { Header } from "../atoms/layout/Header";
 
 type PropsType = {

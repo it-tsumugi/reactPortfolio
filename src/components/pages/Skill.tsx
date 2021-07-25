@@ -1,7 +1,8 @@
+import { skillItems } from "../../data/skillItems";
+import { CardList } from "../organisms/CardList";
+
 export const Skill = () => {
-    return (
-        <div>
-            <h1>Skillページです</h1>
-        </div>
-    );
+  return (
+    <CardList cardList={skillItems} isSkillLevel={true} isUsedTech={false} />
+  );
 };
