@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { init, sendForm } from "emailjs-com";
+import { sendForm } from "emailjs-com";
 import { VFC } from "react";
 import styled from "styled-components";
 
@@ -12,13 +12,7 @@ export const Contact: VFC = () => {
     formState: { errors },
   } = useForm();
 
-  console.log(`${process.env.REACT_APP_USER_ID}`);
-  console.log(`${process.env.REACT_APP_SERVICE_ID}`);
-  console.log(`${process.env.REACT_APP_TEMPLATE_ID}`);
-
-  init(`${process.env.REACT_APP_USER_ID}`);
-
-  const sendMail = (e: any) => {
+  const sendMail = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     sendForm(
       `${process.env.REACT_APP_SERVICE_ID}`,
@@ -33,36 +27,14 @@ export const Contact: VFC = () => {
         console.log("FAILED...", error);
       }
     );
-
     window.alert("メールを送信しました。");
+    e.target.reset();
   };
 
   return (
     <SContainer>
       <p>お気軽に下記フォームより必須事項をご記入の上ご連絡ください。</p>
       <form className="forms" onSubmit={sendMail} id="contact-form">
-        <STextField
-          className="formsItem"
-          variant="filled"
-          label="氏名(必須)"
-          type="text"
-          fullWidth
-          margin="normal"
-          {...register("name", { required: true })}
-          error={Boolean(errors.name)}
-          helperText={errors.name && "氏名を入力してください"}
-        />
-        <STextField
-          className="formsItem"
-          variant="filled"
-          label="メールアドレス(必須)"
-          type="email"
-          fullWidth
-          margin="normal"
-          {...register("email", { required: true })}
-          error={Boolean(errors.email)}
-          helperText={errors.email && "メールアドレスを入力してください"}
-        />
         <STextField
           className="formsItem"
           variant="filled"
@@ -77,11 +49,34 @@ export const Contact: VFC = () => {
         <STextField
           className="formsItem"
           variant="filled"
+          label="氏名(必須)"
+          type="text"
+          fullWidth
+          margin="normal"
+          {...register("name", { required: true })}
+          error={Boolean(errors.name)}
+          helperText={errors.name && "氏名を入力してください"}
+        />
+        <STextField
+          className="formsItem"
+          variant="filled"
+          label="返信用メールアドレス(必須)"
+          type="email"
+          fullWidth
+          margin="normal"
+          {...register("email", { required: true })}
+          error={Boolean(errors.email)}
+          helperText={errors.email && "メールアドレスを入力してください"}
+        />
+
+        <STextField
+          className="formsItem"
+          variant="filled"
           label="お問い合わせ内容(必須)"
           type="text"
           fullWidth
           margin="normal"
-          {...register("body", { required: true })}
+          {...register("message", { required: true })}
           error={Boolean(errors.body)}
           helperText={errors.body && "お問い合わせ内容を入力して下さい。"}
           multiline
