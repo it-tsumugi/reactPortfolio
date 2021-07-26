@@ -8,8 +8,9 @@ import { Product } from "../components/pages/Product";
 import { Study } from "../components/pages/Study";
 import { Contact } from "../components/pages/Contact";
 import { FooterFixed } from "../components/templates/FooterFixed";
+import { Page404 } from "../components/pages/Page404";
 
-export const Path = {
+const Path = {
   home: "/",
   profile: "/profile",
   skill: "/skill",
@@ -18,38 +19,45 @@ export const Path = {
   contact: "/contact",
 };
 
+const homeUrl = process.env.PUBLIC_URL;
+
 export const ComponentRouter: VFC = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Switch>
-        <Route exact path={Path.home}>
+        <Route exact path={homeUrl + Path.home}>
           <FooterFixed>
             <Home />
           </FooterFixed>
         </Route>
-        <Route path={Path.profile}>
+        <Route path={homeUrl + Path.profile}>
           <DefaultLayout>
             <Profile />
           </DefaultLayout>
         </Route>
-        <Route path={Path.skill}>
+        <Route path={homeUrl + Path.skill}>
           <DefaultLayout>
             <Skill />
           </DefaultLayout>
         </Route>
-        <Route path={Path.product}>
+        <Route path={homeUrl + Path.product}>
           <FooterFixed>
             <Product />
           </FooterFixed>
         </Route>
-        <Route path={Path.study}>
+        <Route path={homeUrl + Path.study}>
           <DefaultLayout>
             <Study />
           </DefaultLayout>
         </Route>
-        <Route path={Path.contact}>
+        <Route path={homeUrl + Path.contact}>
           <FooterFixed>
             <Contact />
+          </FooterFixed>
+        </Route>
+        <Route path="*">
+          <FooterFixed>
+            <Page404 />
           </FooterFixed>
         </Route>
       </Switch>

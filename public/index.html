@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>reactPortfolio</title>
+    <script>
+      const path = sessionStorage.getItem('path');
+      console.log(path);
+      if (path && path === '/reactPortfolio/profile') {
+        sessionStorage.removeItem('path');
+        window.history.replaceState(null, null, './profile');
+      }
+    </script>
   </head>
   <!--余白が出ないように-->
   <body style="margin: 0;">
