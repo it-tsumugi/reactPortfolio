@@ -5,7 +5,7 @@ import { Home } from "../components/pages/Home";
 import { Profile } from "../components/pages/Profile";
 import { Skill } from "../components/pages/Skill";
 import { Product } from "../components/pages/Product";
-import { Book } from "../components/pages/study/Book";
+import { Study } from "../components/pages/Study";
 import { Contact } from "../components/pages/Contact";
 import { FooterFixed } from "../components/templates/FooterFixed";
 
@@ -44,13 +44,13 @@ export const ComponentRouter: VFC = () => {
         </Route>
         <Route path={Path.study}>
           <DefaultLayout>
-            <Book />
+            <Study />
           </DefaultLayout>
         </Route>
         <Route path={Path.contact}>
-          <DefaultLayout>
+          <FooterFixed>
             <Contact />
-          </DefaultLayout>
+          </FooterFixed>
         </Route>
       </Switch>
     </BrowserRouter>

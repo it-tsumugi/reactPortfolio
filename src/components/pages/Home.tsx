@@ -1,7 +1,8 @@
+import { VFC } from "react";
 import styled from "styled-components";
 import { ProgileImage } from "../atoms/image/ProfileImage";
 
-export const Home = () => {
+export const Home: VFC = () => {
   return (
     <SContainer>
       <ProgileImage />

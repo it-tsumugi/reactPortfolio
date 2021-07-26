@@ -38,9 +38,8 @@ export const eventItems: eventItemsType[] = [
   },
   {
     id: 5,
-    date: "2019-04",
+    date: "2019-06",
     title: "応用情報処理試験に不合格",
-    text: "午後問題の対策に時間を割き過ぎた結果、午前問題が1問足らず不合格になりました。",
   },
   {
     id: 6,

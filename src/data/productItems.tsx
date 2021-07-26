@@ -9,9 +9,12 @@ import {
 export const productItems: cardItemsType[] = [
   {
     id: 1,
-    title: "ポートフォリオサイト（このサイト）",
+    title: "ポートフォリオサイト",
     text: "ReactやTypeScriptの勉強も兼ねて作成しました。",
     img: reactImg,
+    name: "ポートフォリオサイト",
+    width: 160,
+    height: 160,
     usedTechImg: [reactImg, tsImg, styledComponentsImg, materialUiImg],
   },
 ];
