@@ -7,6 +7,8 @@ import c from "./C.png";
 import cpp from "./C++.png";
 import java from "./Java.png";
 import materialUi from "./material-ui.png";
+import cudac from "./CUDA.jpg";
+import verilog from "./verilog.png";
 
 export const reactImg = react;
 export const tsImg = ts;
@@ -17,3 +19,5 @@ export const cImg = c;
 export const cppImg = cpp;
 export const javaImg = java;
 export const materialUiImg = materialUi;
+export const verilogImg = verilog;
+export const cudacImg = cudac;

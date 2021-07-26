@@ -3,8 +3,9 @@ import { Footer } from "../molecules/layout/Footer";
 import { Header } from "../atoms/layout/Header";
 
 type PropsType = {
-  children: any;
+  children: React.ReactElement;
 };
+
 export const FooterFixed: VFC<PropsType> = (props) => {
   const { children } = props;
   return (

@@ -9,6 +9,7 @@ import bookReact3 from "./react3.jpg";
 import bookReact4 from "./react4.jpg";
 import bookJs1 from "./bookJS1.jpg";
 import bookHtmlCss1 from "./bookHTMLCSS1.jpg";
+import bookWeb1 from "./bookWeb1.jpg";
 
 import youtube from "./youtube.png";
 import udemy from "./udemy.png";
@@ -26,6 +27,7 @@ export const bookReactImg3 = bookReact3;
 export const bookReactImg4 = bookReact4;
 export const bookJsImg1 = bookJs1;
 export const bookHtmlCssImg = bookHtmlCss1;
+export const bookWebImg1 = bookWeb1;
 
 export const youtubeImg = youtube;
 export const progateImg = progate;

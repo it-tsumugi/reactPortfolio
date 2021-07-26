@@ -19,41 +19,39 @@ const Path = {
   contact: "/contact",
 };
 
-const homeUrl = process.env.PUBLIC_URL;
-
 export const ComponentRouter: VFC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path={homeUrl + Path.home}>
-          <FooterFixed>
+        <Route exact path={Path.home}>
+          <DefaultLayout fixed={true}>
             <Home />
-          </FooterFixed>
+          </DefaultLayout>
         </Route>
-        <Route path={homeUrl + Path.profile}>
-          <DefaultLayout>
+        <Route path={Path.profile}>
+          <DefaultLayout fixed={false}>
             <Profile />
           </DefaultLayout>
         </Route>
-        <Route path={homeUrl + Path.skill}>
-          <DefaultLayout>
+        <Route path={Path.skill}>
+          <DefaultLayout fixed={false}>
             <Skill />
           </DefaultLayout>
         </Route>
-        <Route path={homeUrl + Path.product}>
-          <FooterFixed>
+        <Route path={Path.product}>
+          <DefaultLayout fixed={true}>
             <Product />
-          </FooterFixed>
+          </DefaultLayout>
         </Route>
-        <Route path={homeUrl + Path.study}>
-          <DefaultLayout>
+        <Route path={Path.study}>
+          <DefaultLayout fixed={false}>
             <Study />
           </DefaultLayout>
         </Route>
-        <Route path={homeUrl + Path.contact}>
-          <FooterFixed>
+        <Route path={Path.contact}>
+          <DefaultLayout fixed={true}>
             <Contact />
-          </FooterFixed>
+          </DefaultLayout>
         </Route>
         <Route path="*">
           <FooterFixed>

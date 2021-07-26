@@ -16,8 +16,9 @@ import {
   udemyTsImg,
   bookHtmlCssImg,
   bookJsImg1,
-  bookReactImg1,
+  bookWebImg1,
   gitImg,
+  bookReactImg1,
   bookReactImg2,
   bookReactImg3,
   bookReactImg4,
@@ -98,6 +99,16 @@ export const studyItems: cardItemsType[] = [
   },
   {
     id: 8,
+    title: "Webを支える技術 ",
+    text: "Webの仕組みそのものを知りたかったので読みました。かなり難しかったですが、基本的な構造や歴史は把握出来ました。",
+    img: bookWebImg1,
+    name: "Webを支える技術",
+    width: 160,
+    height: 200,
+    usedTechImg: [],
+  },
+  {
+    id: 9,
     title: "「超TypeScript入門 完全パック(2021)」(udemy)",
     text: "TypeScriptの型定義について詳細に知りたかったので購入しました。現在も参考にしています。",
     img: udemyTsImg,
@@ -107,7 +118,7 @@ export const studyItems: cardItemsType[] = [
     usedTechImg: [tsImg],
   },
   {
-    id: 9,
+    id: 10,
     title:
       "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅰ. 言語・環境編】",
     text: "ReactとTypeScriptの組み合わせを体系的に学べる書籍が欲しかったので購入しました。",
@@ -118,10 +129,10 @@ export const studyItems: cardItemsType[] = [
     usedTechImg: [reactImg, tsImg],
   },
   {
-    id: 10,
+    id: 11,
     title:
       "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅱ. React基礎編】",
-    text: "",
+    text: "同文につき省略。",
     img: bookReactImg2,
     name: "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅱ. React基礎編】",
     width: 160,
@@ -129,10 +140,10 @@ export const studyItems: cardItemsType[] = [
     usedTechImg: [reactImg, tsImg],
   },
   {
-    id: 11,
+    id: 12,
     title:
       "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅲ. React応用編】",
-    text: "",
+    text: "同文につき省略。",
     img: bookReactImg3,
     name: "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅲ. React応用編】",
     width: 160,
@@ -140,9 +151,9 @@ export const studyItems: cardItemsType[] = [
     usedTechImg: [reactImg, tsImg],
   },
   {
-    id: 12,
+    id: 13,
     title: "りあクト！ Firebaseで始めるサーバーレスReact開発",
-    text: "",
+    text: "同文につき省略。",
     img: bookReactImg4,
     name: "りあクト！ Firebaseで始めるサーバーレスReact開発",
     width: 160,

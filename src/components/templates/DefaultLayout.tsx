@@ -1,18 +1,19 @@
-import { VFC } from "react";
+import { memo, VFC } from "react";
 import { Footer } from "../molecules/layout/Footer";
 import { Header } from "../atoms/layout/Header";
 
 type PropsType = {
-  children: any;
+  children: React.ReactElement;
+  fixed: boolean;
 };
 
-export const DefaultLayout: VFC<PropsType> = (props) => {
-  const { children } = props;
+export const DefaultLayout: VFC<PropsType> = memo((props) => {
+  const { children, fixed } = props;
   return (
     <>
       <Header />
       {children}
-      <Footer fixed={false} />
+      <Footer fixed={fixed} />
     </>
   );
-};
+});

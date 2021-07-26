@@ -9,6 +9,8 @@ import {
   cppImg,
   cImg,
   javaImg,
+  cudacImg,
+  verilogImg,
 } from "../assets/images/technic/techImages";
 import { gitImg } from "../assets/images/study/studyImges";
 
@@ -119,6 +121,28 @@ export const skillItems: cardItemsType[] = [
     img: javaImg,
     name: "Java ",
     width: 160,
+    height: 160,
+    rate: 2,
+    usedTechImg: [""],
+  },
+  {
+    id: 11,
+    title: "Verilog HDL",
+    text: "FPGA用の言語です。研究室の講義で少し使用しましたが、効率の良いプログラムをかけるレベルではありません。",
+    img: verilogImg,
+    name: "verilog ",
+    width: 160,
+    height: 160,
+    rate: 1,
+    usedTechImg: [""],
+  },
+  {
+    id: 11,
+    title: "CUDA C",
+    text: "NVIDIA製GPU用の言語です。この言語を使用して研究を行っています。",
+    img: cudacImg,
+    name: "CUDA C ",
+    width: 250,
     height: 160,
     rate: 2,
     usedTechImg: [""],

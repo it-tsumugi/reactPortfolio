@@ -22,13 +22,14 @@ export const CardList: VFC<cardListType> = (props) => {
                 alt={card.name}
               />
               <STitle>{card.title}</STitle>
+              <SUnderLine />
               {isSkillLevel ? (
                 <SRatingContents>
                   <h4 style={{ paddingTop: 0 }}>熟練度</h4>
                   <Rating value={card.rate} readOnly />
                 </SRatingContents>
               ) : null}
-              <p style={{ textAlign: "left" }}>{card.text}</p>
+              <p style={{ textAlign: "left", marginTop: 10 }}>{card.text}</p>
               <SContainer>
                 <STechText>{titleTechImg}</STechText>
                 <STechImgContainer>
@@ -73,7 +74,6 @@ const SCard = styled(Card)`
 `;
 
 const STitle = styled.h2`
-  border-bottom: solid 3px white;
   font-size: 20px;
 `;
 
@@ -102,4 +102,12 @@ const SContainer = styled.div`
   flex-direction: column;
   position: absolute;
   bottom: 15px;
+`;
+
+const SUnderLine = styled.div`
+  border-top: 3px solid #fff;
+  padding-bottom: 10px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1500px;
 `;

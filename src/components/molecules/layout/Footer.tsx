@@ -29,6 +29,6 @@ const SFooter = styled.header<{ fixed: boolean }>`
   width: 100%;
   position: ${({ fixed }) => (fixed ? "fixed" : "false")};
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  gap: 80px;
 `;
