@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/reactPortfolio/static/js/main.94471e09.chunk.js",
-    "main.js.map": "/reactPortfolio/static/js/main.94471e09.chunk.js.map",
+    "main.js": "/reactPortfolio/static/js/main.2153a263.chunk.js",
+    "main.js.map": "/reactPortfolio/static/js/main.2153a263.chunk.js.map",
     "runtime-main.js": "/reactPortfolio/static/js/runtime-main.709b17d1.js",
     "runtime-main.js.map": "/reactPortfolio/static/js/runtime-main.709b17d1.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/reactPortfolio/static/css/2.2aa38b9c.chunk.css",
@@ -11,12 +11,14 @@
     "static/css/2.2aa38b9c.chunk.css.map": "/reactPortfolio/static/css/2.2aa38b9c.chunk.css.map",
     "static/js/2.773bb1fa.chunk.js.LICENSE.txt": "/reactPortfolio/static/js/2.773bb1fa.chunk.js.LICENSE.txt",
     "static/media/C.b5557b32.png": "/reactPortfolio/static/media/C.b5557b32.png",
+    "static/media/CUDA.cc824a87.jpg": "/reactPortfolio/static/media/CUDA.cc824a87.jpg",
     "static/media/HTML_CSS.5091f0ae.png": "/reactPortfolio/static/media/HTML_CSS.5091f0ae.png",
     "static/media/Javascript.029db7d4.png": "/reactPortfolio/static/media/Javascript.029db7d4.png",
     "static/media/React.47f23ffb.png": "/reactPortfolio/static/media/React.47f23ffb.png",
     "static/media/Typescript.c2eef6df.png": "/reactPortfolio/static/media/Typescript.c2eef6df.png",
     "static/media/bookHTMLCSS1.97799b87.jpg": "/reactPortfolio/static/media/bookHTMLCSS1.97799b87.jpg",
     "static/media/bookJS1.ecb717de.jpg": "/reactPortfolio/static/media/bookJS1.ecb717de.jpg",
+    "static/media/bookWeb1.93e615b5.jpg": "/reactPortfolio/static/media/bookWeb1.93e615b5.jpg",
     "static/media/monsterBall.057effe2.jpg": "/reactPortfolio/static/media/monsterBall.057effe2.jpg",
     "static/media/progate.474c526c.png": "/reactPortfolio/static/media/progate.474c526c.png",
     "static/media/react1.46a8e2c5.jpg": "/reactPortfolio/static/media/react1.46a8e2c5.jpg",
@@ -34,6 +36,6 @@
     "static/js/runtime-main.709b17d1.js",
     "static/css/2.2aa38b9c.chunk.css",
     "static/js/2.773bb1fa.chunk.js",
-    "static/js/main.94471e09.chunk.js"
+    "static/js/main.2153a263.chunk.js"
   ]
 }
