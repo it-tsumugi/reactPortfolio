@@ -14,7 +14,7 @@ export const Profile: VFC = () => {
           <SProfileItemContainer key={text.id}>
             <SElementContainer>
               <SType>{text.type}</SType>
-              <SText>{text.text}</SText>
+              <p>{text.text}</p>
               {text.isDetail ? (
                 <SLabel htmlFor={"detail" + text.id}>詳細</SLabel>
               ) : null}
@@ -51,14 +51,13 @@ const SElementContainer = styled.div`
   min-height: 70px;
   width: 100%;
   box-sizing: border-box;
-`;
-
-const SText = styled.div`
   font-size: 32px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const SType = styled.div`
-  font-size: 32px;
   text-align: left;
   font-weight: bold;
   width: 200px;
@@ -114,6 +113,9 @@ const SLabel = styled.label`
     background: rgba(255, 255, 255, 0.3);
   }
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
-  min-width: 100px;
+  min-width: 80px;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;

@@ -14,7 +14,7 @@ const Path = {
   profile: "/profile",
   skill: "/skill",
   product: "/product",
-  study: "/book",
+  study: "/study",
   contact: "/contact",
 };
 

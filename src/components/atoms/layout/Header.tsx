@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { VFC } from "react";
+import { VFC, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-import { Tab, Tabs, AppBar } from "@material-ui/core";
+import { Tab, Tabs, AppBar, Menu, MenuItem, Button } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 interface headerItemType {
   id: number;
@@ -33,7 +35,7 @@ const headerItem: headerItemType[] = [
   },
   {
     id: 5,
-    route: "/book",
+    route: "/study",
     label: "STUDY",
   },
   {
@@ -45,14 +47,24 @@ const headerItem: headerItemType[] = [
 
 export const Header: VFC = () => {
   const history = useHistory();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <SAppBar position="static" color="inherit">
-      <Tabs
+      <STabs
         value={history.location.pathname}
         variant="fullWidth"
         indicatorColor="secondary"
         centered
-        aria-label="simple tabs example"
+        aria-label="headerTabs"
       >
         {headerItem.map((val) => {
           return (
@@ -65,10 +77,74 @@ export const Header: VFC = () => {
             />
           );
         })}
-      </Tabs>
+      </STabs>
+      <SMenuContainer>
+        <SMenuTitle>Tsumugi's PortFolio</SMenuTitle>
+        <SMenuIconContainer>
+          <Button
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+          >
+            {!anchorEl ? <MenuIcon /> : <CloseIcon />}
+          </Button>
+        </SMenuIconContainer>
+        <SMenu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose} component={Link} to="/">
+            HOME
+          </MenuItem>
+          <MenuItem onClick={handleClose} component={Link} to="/profile">
+            PROFILE
+          </MenuItem>
+          <MenuItem onClick={handleClose} component={Link} to="/skill">
+            SKILL
+          </MenuItem>
+          <MenuItem onClick={handleClose} component={Link} to="/product">
+            PRODUCT
+          </MenuItem>
+          <MenuItem onClick={handleClose} component={Link} to="/study">
+            STUDY
+          </MenuItem>
+          <MenuItem onClick={handleClose} component={Link} to="/contact">
+            CONTACT
+          </MenuItem>
+        </SMenu>
+      </SMenuContainer>
     </SAppBar>
   );
 };
+
+const SMenuTitle = styled.p`
+  text-align: left;
+  font-size: 14px;
+`;
+
+const STabs = styled(Tabs)`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const SMenuIconContainer = styled.div`
+  margin-left: auto;
+`;
+
+const SMenu = styled(Menu)`
+  margin-top: 30px;
+`;
+
+const SMenuContainer = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
 const SAppBar = styled(AppBar)`
   background: #193278;
   color: #fff;

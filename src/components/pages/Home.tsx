@@ -16,8 +16,12 @@ export const Home: VFC = () => {
 const Smessage = styled.h1`
   font-size: 64px;
   margin: 10px auto;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const SContainer = styled.div`
-  margin: 10%;
+  margin: auto;
 `;

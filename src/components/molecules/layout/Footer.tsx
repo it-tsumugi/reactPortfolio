@@ -26,4 +26,8 @@ const SFooter = styled.footer`
   justify-content: center;
   gap: 80px;
   margin-top: auto;
+
+  @media (max-width: 768px) {
+    gap: 40px;
+  }
 `;
