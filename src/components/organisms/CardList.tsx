@@ -3,12 +3,15 @@ import styled from "styled-components";
 
 import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
-import Rating from "@material-ui/lab/Rating";
 
-import { cardListType } from "../../Type";
+import { cardListType } from "../../assets/Type";
+import { CardTitle } from "../molecules/card/CardTitle";
+import { CardRating } from "../molecules/card/CardRating";
+import { CardTech } from "../molecules/card/CardTech";
 
 export const CardList: VFC<cardListType> = (props) => {
-  const { cardList, isSkillLevel, isUsedTech, flexwrap, titleTechImg } = props;
+  const { cardList, isSkillLevel, isUsedTech, isIcon, flexwrap, titleTechImg } =
+    props;
   return (
     <SGridContainer container spacing={2} flexwrap={flexwrap}>
       {cardList.map((card) => {
@@ -21,32 +24,15 @@ export const CardList: VFC<cardListType> = (props) => {
                 src={card.img}
                 alt={card.name}
               />
-              <STitle>{card.title}</STitle>
+              <CardTitle title={card.title} url={card.url} isIcon={isIcon} />
               <SUnderLine />
-              {isSkillLevel ? (
-                <SRatingContents>
-                  <h4 style={{ paddingTop: 0 }}>熟練度</h4>
-                  <Rating value={card.rate} readOnly />
-                </SRatingContents>
-              ) : null}
-              <p style={{ textAlign: "left", marginTop: 10 }}>{card.text}</p>
-              <SContainer>
-                <STechText>{titleTechImg}</STechText>
-                <STechImgContainer>
-                  {isUsedTech
-                    ? card.usedTechImg.map((img) => (
-                        <img
-                          height={50}
-                          width={50}
-                          src={img}
-                          alt={titleTechImg}
-                          style={{ float: "left" }}
-                          key={img}
-                        />
-                      ))
-                    : null}
-                </STechImgContainer>
-              </SContainer>
+              <CardRating isSkillLevel={isSkillLevel} rate={card.rate} />
+              <SCardText>{card.text}</SCardText>
+              <CardTech
+                titleTechImg={titleTechImg}
+                isUsedTech={isUsedTech}
+                usedTechImg={card.usedTechImg}
+              />
             </SCard>
           </Grid>
         );
@@ -73,41 +59,15 @@ const SCard = styled(Card)`
   position: relative;
 `;
 
-const STitle = styled.h2`
-  font-size: 20px;
-`;
-
-const SRatingContents = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 13px;
-`;
-
-const STechText = styled.div`
-  text-align: left;
-  text-decoration: underline;
-  padding-bottom: 5px;
-`;
-
-const STechImgContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-wrap: wrap;
-`;
-
-const SContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 15px;
-`;
-
 const SUnderLine = styled.div`
   border-top: 3px solid #fff;
   padding-bottom: 10px;
   width: 100%;
   margin: 0 auto;
   max-width: 1500px;
+`;
+
+const SCardText = styled.p`
+  text-align: left;
+  margin-top: 10px;
 `;

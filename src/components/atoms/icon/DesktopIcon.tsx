@@ -1,13 +1,13 @@
-import GitHub from "@material-ui/icons/GitHub";
+import Desktop from "@material-ui/icons/DesktopMac";
 import { VFC } from "react";
 import { iconType } from "../../../assets/Type";
 import { SBaseIcon } from "./SBaseIcon";
 
-export const GitHubIcon: VFC<iconType> = (props) => {
+export const DesktopIcon: VFC<iconType> = (props) => {
   const { url } = props;
   return (
     <SBaseIcon>
-      <GitHub onClick={() => window.open(url)} />
+      <Desktop onClick={() => window.open(url)} />
     </SBaseIcon>
   );
 };

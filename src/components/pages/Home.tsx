@@ -1,13 +1,12 @@
 import { VFC } from "react";
 import styled from "styled-components";
-import { ProgileImage } from "../atoms/image/ProfileImage";
+import { ProfileImage } from "../atoms/image/ProfileImage";
 
 export const Home: VFC = () => {
   return (
     <SContainer>
-      <ProgileImage />
+      <ProfileImage />
       <Smessage>
-        <div>Welcome to </div>
         <div>Tsumugi's Portofolio</div>
       </Smessage>
     </SContainer>

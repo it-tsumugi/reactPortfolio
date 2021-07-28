@@ -4,7 +4,7 @@ import {
   tsImg,
   styledComponentsImg,
   materialUiImg,
-} from "../assets/images/technic/techImages";
+} from "../images/technic/techImages";
 
 export const productItems: cardItemsType[] = [
   {
@@ -15,6 +15,7 @@ export const productItems: cardItemsType[] = [
     name: "ポートフォリオサイト",
     width: 160,
     height: 160,
+    url: "https://it-tsumugi.github.io/reactPortfolio/",
     usedTechImg: [reactImg, tsImg, styledComponentsImg, materialUiImg],
   },
 ];

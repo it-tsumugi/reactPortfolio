@@ -1,157 +1,119 @@
-import { useState, VFC } from "react";
+import { VFC } from "react";
 import styled from "styled-components";
 
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-
-import { DetailButton } from "../atoms/button/DetailButton";
-import { ProgileImage } from "../atoms/image/ProfileImage";
-import { profileItems } from "../../data/profileItems";
-import { eventItems } from "../../data/eventItems";
+import { ProfileImage } from "../atoms/image/ProfileImage";
+import { profileItems } from "../../assets/data/profileItems";
+import { ProfileTimeline } from "../molecules/profile/ProfileTimeline";
 
 export const Profile: VFC = () => {
-  const [num, setNum] = useState<number>(0);
-  const openClose = (num: number, newNum: number) => {
-    if (num === newNum) setNum(0);
-    else setNum(newNum);
-  };
   return (
-    <SContentsWrapper>
-      <ProgileImage />
+    <SProfileContainer>
+      <ProfileImage />
       {profileItems.map((text) => {
         return (
-          <SProfileContainer key={text.id}>
-            <SOrganismContainer>
-              <SMoleculesContainer>
-                <STextContainer>
-                  <SType>{text.type}</SType>
-                  <SContent>{text.content}</SContent>
-                </STextContainer>
-                <SUnderLine />
-              </SMoleculesContainer>
-              <SHiddenContents>
-                {num === text.id ? (
-                  <SHiddenDetail>{text.detailText}</SHiddenDetail>
-                ) : null}
-              </SHiddenContents>
-            </SOrganismContainer>
-            <SDetail>
-              {text.detail ? (
-                <DetailButton onClick={openClose} num={num} newNum={text.id}>
-                  詳細
-                </DetailButton>
+          <SProfileItemContainer key={text.id}>
+            <SElementContainer>
+              <SType>{text.type}</SType>
+              <SText>{text.text}</SText>
+              {text.isDetail ? (
+                <SLabel htmlFor={"detail" + text.id}>詳細</SLabel>
               ) : null}
-            </SDetail>
-          </SProfileContainer>
+            </SElementContainer>
+            <SInput type="Checkbox" id={"detail" + text.id} />
+            <SUnderLine />
+            <SHiddenDetail className="HiddenDetail">
+              {text.detailText}
+            </SHiddenDetail>
+          </SProfileItemContainer>
         );
       })}
-
-      <STimeline>
-        <h1>History</h1>
-        <VerticalTimeline>
-          {eventItems.map((value) => {
-            return (
-              <SVerticalTimelineElement
-                key={value.id}
-                contentStyle={{ background: "#fff", color: "#222" }}
-                contentArrowStyle={{ borderRight: "10px solid  #fff" }}
-                date={value.date}
-                dateClassName={"timelineDate"}
-                iconStyle={{
-                  background: "#193278",
-                }}
-              >
-                <h3>{value.title}</h3>
-                <p>{value.text}</p>
-              </SVerticalTimelineElement>
-            );
-          })}
-        </VerticalTimeline>
-      </STimeline>
+      <ProfileTimeline />
       <SSNS>フッターにGitHub、Twitter、Qiitaのアカウントを載せています。</SSNS>
-    </SContentsWrapper>
+    </SProfileContainer>
   );
 };
 
-const SContentsWrapper = styled.div`
-  padding-top: 100px;
-`;
-
 const SProfileContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1500px;
+  padding-top: 100px;
+  height: 100%;
 `;
 
-const SMoleculesContainer = styled.div`
-  width: 100%;
+const SProfileItemContainer = styled.div`
   margin: 0 auto;
   max-width: 1500px;
+  height: 100%;
 `;
-const STextContainer = styled.div`
+
+const SElementContainer = styled.div`
   display: flex;
-  padding-top: 20px;
+  align-items: center;
+  padding: 3px;
+  min-height: 70px;
+  width: 100%;
+  box-sizing: border-box;
+`;
+
+const SText = styled.div`
+  font-size: 32px;
 `;
 
 const SType = styled.div`
+  font-size: 32px;
   text-align: left;
-  font-size: 28px;
   font-weight: bold;
   width: 200px;
 `;
-const SContent = styled.div`
-  font-size: 28px;
-`;
 
 const SUnderLine = styled.div`
-  padding: 3px;
   border-bottom: 2px solid #fff;
   width: 100%;
   margin: 0 auto;
   max-width: 1500px;
-`;
-
-const SDetail = styled.div`
-  margin-left: 5px;
+  box-sizing: border-box;
 `;
 
 const SHiddenDetail = styled.div`
+  height: 0;
+  padding: 0 15px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
   text-align: left;
   font-size: 20px;
+  width: 100%;
   border-radius: 5px 5px 5px 5px;
   border: solid 3px white;
-  padding: 15px 0 15px 10px;
-  margin-top: 8px;
-  width: 98.7%;
-  height: auto;
-`;
-
-const SOrganismContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1500px;
-`;
-
-const SHiddenContents = styled.div``;
-
-const SVerticalTimelineElement = styled(VerticalTimelineElement)`
-  .timelineDate {
-    font-weight: bold;
-    color: white;
-  }
-`;
-
-const STimeline = styled.div`
-  margin: 300px 0 50px;
+  box-sizing: border-box;
 `;
 
 const SSNS = styled.div`
   text-align: center;
   padding-bottom: 50px;
+`;
+
+const SInput = styled.input`
+  display: none;
+  &:checked ~ .HiddenDetail {
+    height: auto;
+    opacity: 1;
+    padding: 15px;
+    margin-top: 8px;
+  }
+`;
+
+const SLabel = styled.label`
+  font-size: 20px;
+  font-weight: normal;
+  background-color: #193278;
+  color: #e0e0e0;
+  cursor: pointer;
+  padding: 15px;
+  margin-left: auto;
+  border: solid 2px black;
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+  min-width: 100px;
+  box-sizing: border-box;
 `;

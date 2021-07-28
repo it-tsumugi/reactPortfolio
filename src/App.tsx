@@ -4,7 +4,6 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 
 import { theme } from "./assets/styles/theme";
 import { VFC } from "react";
-
 export const App: VFC = () => {
   return (
     <StylesProvider injectFirst>

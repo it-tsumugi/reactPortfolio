@@ -91,7 +91,6 @@ export const Contact: VFC = () => {
           送信
         </SButton>
       </form>
-      <p style={{ paddingTop: 80 }}>it-tsumugi@gmail.com</p>
     </SContainer>
   );
 };
@@ -100,7 +99,7 @@ const SContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   max-width: 1500px;
-  padding: 80px 0 50px;
+  padding: 80px 0 0;
 `;
 
 const STextField = styled(TextField)`

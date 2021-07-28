@@ -1,0 +1,12 @@
+import styled from "styled-components";
+import { VFC } from "react";
+
+type PropsType = {
+};
+
+export const : VFC<PropsType> = (props) => {
+  const {  } = props;
+  return (
+
+  );
+};

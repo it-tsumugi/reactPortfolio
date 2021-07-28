@@ -1,5 +1,5 @@
 import { VFC } from "react";
-import { skillItems } from "../../data/skillItems";
+import { skillItems } from "../../assets/data/skillItems";
 import { CardList } from "../organisms/CardList";
 
 export const Skill: VFC = () => {
@@ -8,6 +8,7 @@ export const Skill: VFC = () => {
       cardList={skillItems}
       isSkillLevel={true}
       isUsedTech={false}
+      isIcon={false}
       flexwrap="wrap"
     />
   );

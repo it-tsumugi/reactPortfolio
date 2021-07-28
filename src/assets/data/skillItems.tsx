@@ -11,8 +11,8 @@ import {
   javaImg,
   cudacImg,
   verilogImg,
-} from "../assets/images/technic/techImages";
-import { gitImg } from "../assets/images/study/studyImges";
+} from "..//images/technic/techImages";
+import { gitImg } from "../images/study/studyImges";
 
 export const skillItems: cardItemsType[] = [
   {

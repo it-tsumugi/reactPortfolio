@@ -1,12 +1,13 @@
 import Twitter from "@material-ui/icons/Twitter";
+import { VFC } from "react";
+import { iconType } from "../../../assets/Type";
 import { SBaseIcon } from "./SBaseIcon";
 
-export const TwitterIcon = () => {
+export const TwitterIcon: VFC<iconType> = (props) => {
+  const { url } = props;
   return (
     <SBaseIcon>
-      <Twitter
-        onClick={() => window.open("https://twitter.com/it_tsumugi", "_blank")}
-      />
+      <Twitter onClick={() => window.open(url)} />
     </SBaseIcon>
   );
 };

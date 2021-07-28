@@ -5,9 +5,9 @@ import { App } from "./App";
 
 const SApp = styled.div`
   background-color: #294286;
-  text-align: center;
   color: white;
   min-height: 100vh;
+  text-align: center;
 `;
 
 ReactDOM.render(
