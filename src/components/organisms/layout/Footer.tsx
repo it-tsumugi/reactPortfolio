@@ -4,6 +4,7 @@ import { VFC } from "react";
 import { GitHubIcon } from "../../atoms/icon/GitHubIcon";
 import { TwitterIcon } from "../../atoms/icon/TwitterIcon";
 import { QiitaIcon } from "../../atoms/icon/QiitaIcon";
+import media from "../../../assets/styles/media";
 
 export const Footer: VFC = () => {
   return (
@@ -21,13 +22,20 @@ const SFooter = styled.footer`
   color: #fff;
   padding: 10px 0;
   bottom: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 80px;
+  align-items: center;
+  //フッター固定用
   margin-top: auto;
 
-  @media (max-width: 768px) {
-    gap: 40px;
-  }
+  gap: 80px;
+  height: 40px;
+  ${media.lg`
+  gap: 60px;
+  height: 45px;
+  `}
+  ${media.md`
+  gap: 40px;
+  height: 50px;
+  `}
 `;

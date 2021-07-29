@@ -1,32 +1,16 @@
 import { VFC } from "react";
 import styled from "styled-components";
+import media from "../../assets/styles/media";
 
 import { ProfileImage } from "../atoms/image/ProfileImage";
-import { profileItems } from "../../assets/data/profileItems";
 import { ProfileTimeline } from "../molecules/profile/ProfileTimeline";
+import { ProfileContents } from "../organisms/profile/ProfileContents";
 
 export const Profile: VFC = () => {
   return (
     <SProfileContainer>
       <ProfileImage />
-      {profileItems.map((text) => {
-        return (
-          <SProfileItemContainer key={text.id}>
-            <SElementContainer>
-              <SType>{text.type}</SType>
-              <p>{text.text}</p>
-              {text.isDetail ? (
-                <SLabel htmlFor={"detail" + text.id}>詳細</SLabel>
-              ) : null}
-            </SElementContainer>
-            <SInput type="Checkbox" id={"detail" + text.id} />
-            <SUnderLine />
-            <SHiddenDetail className="HiddenDetail">
-              {text.detailText}
-            </SHiddenDetail>
-          </SProfileItemContainer>
-        );
-      })}
+      <ProfileContents />
       <ProfileTimeline />
       <SSNS>フッターにGitHub、Twitter、Qiitaのアカウントを載せています。</SSNS>
     </SProfileContainer>
@@ -34,88 +18,28 @@ export const Profile: VFC = () => {
 };
 
 const SProfileContainer = styled.div`
+  text-align: center;
+  width: 85vw;
+  margin: 0 auto;
+
   padding-top: 100px;
-  height: 100%;
+  ${media.lg`
+  padding-top: 80px;
+  `}
+  ${media.md`
+  padding-top: 60px;
+  `}
 `;
 
-const SProfileItemContainer = styled.div`
-  margin: 0 auto;
-  max-width: 1500px;
-  height: 100%;
-`;
-
-const SElementContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 3px;
-  min-height: 70px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 32px;
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-`;
-
-const SType = styled.div`
-  text-align: left;
-  font-weight: bold;
-  width: 200px;
-`;
-
-const SUnderLine = styled.div`
-  border-bottom: 2px solid #fff;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1500px;
-  box-sizing: border-box;
-`;
-
-const SHiddenDetail = styled.div`
-  height: 0;
-  padding: 0 15px;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-  text-align: left;
-  font-size: 20px;
-  width: 100%;
-  border-radius: 5px 5px 5px 5px;
-  border: solid 3px white;
-  box-sizing: border-box;
-`;
-
-const SSNS = styled.div`
+const SSNS = styled.p`
   text-align: center;
   padding-bottom: 50px;
-`;
 
-const SInput = styled.input`
-  display: none;
-  &:checked ~ .HiddenDetail {
-    height: auto;
-    opacity: 1;
-    padding: 15px;
-    margin-top: 8px;
-  }
-`;
-
-const SLabel = styled.label`
-  font-size: 20px;
-  font-weight: normal;
-  background-color: #193278;
-  color: #e0e0e0;
-  cursor: pointer;
-  padding: 15px;
-  margin-left: auto;
-  border: solid 2px black;
-  &:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
-  min-width: 80px;
-  box-sizing: border-box;
-  @media (max-width: 768px) {
-    font-size: 10px;
-  }
+  font-size: 16px;
+  ${media.lg`
+  font-size: 14px;
+  `}
+  ${media.md`
+  font-size: 12px;
+  `}
 `;

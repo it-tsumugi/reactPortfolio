@@ -137,7 +137,7 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 11,
+    id: 12,
     title: "CUDA C",
     text: "NVIDIA製GPU用の言語です。この言語を使用して研究を行っています。",
     img: cudacImg,

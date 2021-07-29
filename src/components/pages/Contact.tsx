@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import media from "../../assets/styles/media";
 
 export const Contact: VFC = () => {
   const {
@@ -33,7 +34,9 @@ export const Contact: VFC = () => {
 
   return (
     <SContainer>
-      <p>お気軽に下記フォームより必須事項をご記入の上ご連絡ください。</p>
+      <SText>
+        お気軽に下記フォームより必須事項をご記入の上ご連絡ください。
+      </SText>
       <form className="forms" onSubmit={sendMail} id="contact-form">
         <STextField
           className="formsItem"
@@ -95,11 +98,28 @@ export const Contact: VFC = () => {
   );
 };
 
+const SText = styled.p`
+  font-size: 16px;
+  ${media.lg`
+  font-size: 14px;
+  `}
+  ${media.md`
+  font-size: 12px;
+  `}
+`;
+
 const SContainer = styled.div`
   width: 100%;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 80vw;
+
   padding: 80px 0 0;
+  ${media.lg`
+  padding: 60px 0 0;
+  `}
+  ${media.md`
+  padding: 40px 0 0;
+  `}
 `;
 
 const STextField = styled(TextField)`

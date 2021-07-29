@@ -1,5 +1,6 @@
 import { VFC } from "react";
 import styled from "styled-components";
+import media from "../../../assets/styles/media";
 
 import { DesktopIcon } from "../../atoms/icon/DesktopIcon";
 
@@ -13,22 +14,33 @@ export const CardTitle: VFC<PropsType> = (props) => {
   const { title, isIcon, url } = props;
   return (
     <STitleContainer>
-      <div style={{ width: 30 }}></div>
+      <SEmpty />
       <STitle>{title}</STitle>
-      {isIcon ? <SDeskTopIcon url={url}></SDeskTopIcon> : null}
+      {isIcon ? <SDeskTopIcon url={url}></SDeskTopIcon> : <SEmpty />}
     </STitleContainer>
   );
 };
 
 const STitle = styled.h2`
-  font-size: 20px;
   margin: 5px 10px 5px 5px;
+
+  font-size: 20px;
+  ${media.lg`
+  font-size: 18px;
+  `}
+  ${media.md`
+  font-size: 16px;
+  `}
 `;
 
 const STitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+const SEmpty = styled.div`
+  width: 30px;
 `;
 
 const SDeskTopIcon = styled(DesktopIcon)`

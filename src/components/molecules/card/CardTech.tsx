@@ -1,5 +1,6 @@
 import { VFC } from "react";
 import styled from "styled-components";
+import media from "../../../assets/styles/media";
 
 type PropsType = {
   titleTechImg: string | undefined;
@@ -34,6 +35,14 @@ const STechText = styled.div`
   text-align: left;
   text-decoration: underline;
   padding-bottom: 5px;
+
+  font-size: 16px;
+  ${media.lg`
+  font-size: 14px;
+  `}
+  ${media.md`
+  font-size: 12px;
+  `}
 `;
 
 const STechImgContainer = styled.div`
