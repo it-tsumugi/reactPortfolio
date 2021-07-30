@@ -8,7 +8,6 @@ import {
 
 export const productItems: cardItemsType[] = [
   {
-    id: 1,
     title: "ポートフォリオサイト",
     text: "ReactやTypeScriptの勉強も兼ねて作成しました。",
     img: reactImg,

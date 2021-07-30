@@ -1,31 +1,38 @@
 import { VFC } from "react";
 import styled from "styled-components";
-import { profileItems } from "../../../assets/data/profileItems";
 import media from "../../../assets/styles/media";
+
+import { profileItems } from "../../../assets/data/profileItems";
 import { ProfileDetailButtonInput } from "../../atoms/profile/ProfileDetailButtonInput";
 import { ProfileHiddenDetail } from "../../molecules/profile/profileHiddenDetail";
 import { ProfileText } from "../../molecules/profile/ProfileText";
 
 export const ProfileContents: VFC = () => {
   return (
-    <SProfileItemsContainer>
+    <SProfileContentsContainer>
       {profileItems.map((item) => {
         return (
-          <SProfileItemContainer key={item.id}>
+          <SProfileItemContainer key={item.type}>
             <SProfileItemLineContainer>
               <ProfileText type={item.type} text={item.text} />
               <SUnderLine />
-              <ProfileHiddenDetail id={item.id} detailText={item.detailText} />
+              <ProfileHiddenDetail
+                type={item.type}
+                detailText={item.detailText}
+              />
             </SProfileItemLineContainer>
-            <ProfileDetailButtonInput isDetail={item.isDetail} id={item.id} />
+            <ProfileDetailButtonInput
+              isDetail={item.isDetail}
+              type={item.type}
+            />
           </SProfileItemContainer>
         );
       })}
-    </SProfileItemsContainer>
+    </SProfileContentsContainer>
   );
 };
 
-const SProfileItemsContainer = styled.div`
+const SProfileContentsContainer = styled.div`
   width: 100%;
   margin: 0 auto;
 `;

@@ -4,12 +4,14 @@ import media from "../../../assets/styles/media";
 
 type PropsType = {
   isDetail: boolean;
-  id: number;
+  type: string;
 };
 
 export const ProfileDetailButtonInput: VFC<PropsType> = (props) => {
-  const { isDetail, id } = props;
-  return <>{isDetail ? <SLabel htmlFor={"detail" + id}>詳細</SLabel> : null}</>;
+  const { isDetail, type } = props;
+  return (
+    <>{isDetail ? <SLabel htmlFor={"detail" + type}>詳細</SLabel> : null}</>
+  );
 };
 
 const SLabel = styled.label`

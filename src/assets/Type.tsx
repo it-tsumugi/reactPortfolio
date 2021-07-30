@@ -1,5 +1,6 @@
+//CardListではtitleをkeyに使っているので一意である必要がある点に注意
 export type cardItemsType = {
-  id: number;
+  id?: number;
   title: string;
   text: string;
   img: string;

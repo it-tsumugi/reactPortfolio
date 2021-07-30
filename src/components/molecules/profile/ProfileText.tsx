@@ -10,14 +10,14 @@ type PropsType = {
 export const ProfileText: VFC<PropsType> = (props) => {
   const { type, text } = props;
   return (
-    <SProfileItemOrganismContainer>
+    <SProfileTextContainer>
       <SType>{type}</SType>
       <p>{text}</p>
-    </SProfileItemOrganismContainer>
+    </SProfileTextContainer>
   );
 };
 
-const SProfileItemOrganismContainer = styled.div`
+const SProfileTextContainer = styled.div`
   display: flex;
   align-items: center;
   text-align: left;

@@ -9,11 +9,9 @@ import CloseIcon from "@material-ui/icons/Close";
 
 export const HeaderMenu: VFC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };

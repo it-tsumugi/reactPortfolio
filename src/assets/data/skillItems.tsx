@@ -16,7 +16,6 @@ import { gitImg } from "../images/study/studyImges";
 
 export const skillItems: cardItemsType[] = [
   {
-    id: 1,
     title: "React",
     text: "このポートフォリオを作成した言語です。書籍「りあクト！」とUdemyの講座で勉強しました。想像していたよりも難しかったですが、コンポーネント指向の考え方は好きです。",
     img: reactImg,
@@ -27,7 +26,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 2,
     title: "TypeScript",
     text: "これからの新規開発ではTypeScriptを使っていくだろうなと考えたのと、型付き言語じゃないのにとても違和感を感じていたので採用しました。ただ、型が多すぎて判断しづらいのが難点です。",
     img: tsImg,
@@ -38,7 +36,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 3,
     title: "styled-components",
     text: "css in JSでまとめて書けるのが好きなので採用しました。Reactととても相性が良いと感じていますが、Tailwid CSSなどの方が採用率は高いような気がします。",
     name: "styled-components",
@@ -49,7 +46,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 4,
     title: "material-ui",
     text: "最初はデザインに時間をかけすぎたくなかったため、Reactにおいて広く使われているUIコンポーネントライブラリとして採用しました。細かいところで手が届かないので、最終的には全部自分で実装した方が良いのかなと感じています。",
     img: materialUiImg,
@@ -60,7 +56,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 5,
     title: "Git",
     text: "チーム開発には必須だと聞いたので使うようにしました。個人的なファイルも開発しているアプリケーションもGitHubで管理しています。一応Git-flowも使っています。",
     img: gitImg,
@@ -71,7 +66,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 6,
     title: "HTML/CSS",
     text: "Progateと書籍を読んで勉強しました。その後は開発しながら覚えている最中です",
     img: htmlCssImg,
@@ -82,7 +76,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 7,
     title: "JavaScript",
     text: "Progateと「JavaScript本格入門」を読んで勉強しました。その後はReactを使いながら覚えています。JavaScriptだけで開発したことはありません。",
     img: jsImg,
@@ -93,7 +86,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 8,
     title: "C",
     text: "大学で主に使っていた言語です。メモリ確保や解法などすべて自分でやらないといけませんでしたが、プログラミング言語の仕組みがよく分かりました。",
     img: cImg,
@@ -104,7 +96,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 9,
     title: "C++",
     text: "AtCoderでの使用言語です。C言語から移行した時は便利さに感動しました。",
     img: cppImg,
@@ -115,7 +106,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 10,
     title: "Java",
     text: "学校の講義で少しだけ使用しました。ガベージコレクションに感動していた覚えがあります。",
     img: javaImg,
@@ -126,7 +116,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 11,
     title: "Verilog HDL",
     text: "FPGA用の言語です。研究室の講義で少し使用しましたが、効率の良いプログラムをかけるレベルではありません。",
     img: verilogImg,
@@ -137,7 +126,6 @@ export const skillItems: cardItemsType[] = [
     usedTechImg: [""],
   },
   {
-    id: 12,
     title: "CUDA C",
     text: "NVIDIA製GPU用の言語です。この言語を使用して研究を行っています。",
     img: cudacImg,

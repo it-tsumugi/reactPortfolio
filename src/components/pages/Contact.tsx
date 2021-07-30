@@ -2,10 +2,11 @@ import { useForm } from "react-hook-form";
 import { sendForm } from "emailjs-com";
 import { VFC } from "react";
 import styled from "styled-components";
+import media from "../../assets/styles/media";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import media from "../../assets/styles/media";
+import { PageTitle } from "../atoms/PageTitle";
 
 export const Contact: VFC = () => {
   const {
@@ -33,7 +34,8 @@ export const Contact: VFC = () => {
   };
 
   return (
-    <SContainer>
+    <SContactContainer>
+      <PageTitle>CONTACT</PageTitle>
       <SText>
         お気軽に下記フォームより必須事項をご記入の上ご連絡ください。
       </SText>
@@ -94,9 +96,23 @@ export const Contact: VFC = () => {
           送信
         </SButton>
       </form>
-    </SContainer>
+    </SContactContainer>
   );
 };
+
+const SContactContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  max-width: 80vw;
+  text-align: center;
+  padding: 80px 0 0;
+  ${media.lg`
+  padding: 0 0 60px;
+  `}
+  ${media.md`
+  padding: 10px 0 40px;
+  `}
+`;
 
 const SText = styled.p`
   font-size: 16px;
@@ -105,20 +121,6 @@ const SText = styled.p`
   `}
   ${media.md`
   font-size: 12px;
-  `}
-`;
-
-const SContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  max-width: 80vw;
-
-  padding: 80px 0 0;
-  ${media.lg`
-  padding: 60px 0 0;
-  `}
-  ${media.md`
-  padding: 40px 0 0;
   `}
 `;
 

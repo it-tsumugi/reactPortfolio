@@ -3,19 +3,38 @@ import styled from "styled-components";
 import media from "../../../assets/styles/media";
 
 type PropsType = {
-  id: number;
+  type: string;
   detailText?: string;
 };
 
 export const ProfileHiddenDetail: VFC<PropsType> = (props) => {
-  const { id, detailText } = props;
+  const { type, detailText } = props;
   return (
     <>
-      <SInput type="Checkbox" id={"detail" + id} />
+      <SInput type="Checkbox" id={"detail" + type} />
       <SHiddenDetail className="HiddenDetail">{detailText}</SHiddenDetail>
     </>
   );
 };
+
+const SInput = styled.input`
+  display: none;
+  &:checked ~ .HiddenDetail {
+    height: auto;
+    opacity: 1;
+
+    padding: 15px;
+    margin-top: 8px;
+    ${media.lg`
+    margin-top: 6px;
+    padding: 12px;
+  `}
+    ${media.md`
+    margin-top: 4px;
+    padding: 9px;
+  `}
+  }
+`;
 
 const SHiddenDetail = styled.div`
   height: 0;
@@ -40,23 +59,4 @@ const SHiddenDetail = styled.div`
   font-size: 12px;
   border: solid 1px white;
   `}
-`;
-
-const SInput = styled.input`
-  display: none;
-  &:checked ~ .HiddenDetail {
-    height: auto;
-    opacity: 1;
-
-    padding: 15px;
-    margin-top: 8px;
-    ${media.lg`
-    margin-top: 6px;
-    padding: 12px;
-  `}
-    ${media.md`
-    margin-top: 4px;
-    padding: 9px;
-  `}
-  }
 `;

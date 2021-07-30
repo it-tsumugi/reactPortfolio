@@ -1,5 +1,6 @@
 import { VFC } from "react";
 import styled from "styled-components";
+import media from "../../assets/styles/media";
 
 import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
@@ -8,17 +9,16 @@ import { cardListType } from "../../assets/Type";
 import { CardTitle } from "../molecules/card/CardTitle";
 import { CardRating } from "../molecules/card/CardRating";
 import { CardTech } from "../molecules/card/CardTech";
-import media from "../../assets/styles/media";
 
 export const CardList: VFC<cardListType> = (props) => {
   const { cardList, isSkillLevel, isUsedTech, isIcon, flexwrap, titleTechImg } =
     props;
   return (
-    <SGridContainer container spacing={2} flexwrap={flexwrap}>
+    <SCardListContainer container spacing={2} flexwrap={flexwrap}>
       {cardList.map((card) => {
         return (
-          <Grid item xs={12} sm={6} md={4} lg={4} key={card.id}>
-            <SCard key={card.id}>
+          <Grid item xs={12} sm={6} md={4} lg={4} key={card.title}>
+            <SCard key={card.title}>
               <img
                 height={card.height}
                 width={card.width}
@@ -38,19 +38,19 @@ export const CardList: VFC<cardListType> = (props) => {
           </Grid>
         );
       })}
-    </SGridContainer>
+    </SCardListContainer>
   );
 };
 
-const SGridContainer = styled(Grid)<{ flexwrap: string }>`
+const SCardListContainer = styled(Grid)<{ flexwrap: string }>`
   margin: 0 auto;
   padding: 50px 0 50px;
-  flex-wrap: ${({ flexwrap }) => flexwrap};
   overflow: hidden;
+  flex-wrap: ${({ flexwrap }) => flexwrap};
 
   width: 80vw;
   ${media.lessThanlg`
-  width:auto;
+  width:98vw;
   `}
 `;
 

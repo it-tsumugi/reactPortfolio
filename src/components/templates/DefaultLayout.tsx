@@ -10,16 +10,16 @@ type PropsType = {
 export const DefaultLayout: VFC<PropsType> = memo((props) => {
   const { children } = props;
   return (
-    <SPageWrapper>
+    <SPageContainer>
       <Header />
       {children}
       <Footer />
-    </SPageWrapper>
+    </SPageContainer>
   );
 });
 
-const SPageWrapper = styled.div`
-  //サイト全体での文字色と背景色
+const SPageContainer = styled.div`
+  //ページ共通のスタイル
   color: white;
   background-color: #294286;
   //フッターの固定
