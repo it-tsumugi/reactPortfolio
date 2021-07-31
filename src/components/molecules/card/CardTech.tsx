@@ -11,7 +11,7 @@ type PropsType = {
 export const CardTech: VFC<PropsType> = (props) => {
   const { titleTechImg, isUsedTech, usedTechImg } = props;
   return (
-    <SContainer>
+    <SComponentContainer>
       <STechText>{titleTechImg}</STechText>
       <STechImgContainer>
         {isUsedTech
@@ -27,9 +27,16 @@ export const CardTech: VFC<PropsType> = (props) => {
             ))
           : null}
       </STechImgContainer>
-    </SContainer>
+    </SComponentContainer>
   );
 };
+
+const SComponentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 15px;
+`;
 
 const STechText = styled.div`
   text-align: left;
@@ -50,11 +57,4 @@ const STechImgContainer = styled.div`
   align-items: center;
   gap: 5px;
   flex-wrap: wrap;
-`;
-
-const SContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 15px;
 `;

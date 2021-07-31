@@ -6,17 +6,17 @@ import { ProfileImage } from "../atoms/image/ProfileImage";
 
 export const Home: VFC = () => {
   return (
-    <SHomeContainer>
+    <SComponentContainer>
       <ProfileImage />
       <SMessage>
         <div>Thank You For Visiting</div>
         <div>Tsumugi's Portofolio</div>
       </SMessage>
-    </SHomeContainer>
+    </SComponentContainer>
   );
 };
 
-const SHomeContainer = styled.div`
+const SComponentContainer = styled.div`
   text-align: center;
   margin: auto;
 `;

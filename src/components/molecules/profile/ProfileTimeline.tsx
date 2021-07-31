@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { VFC } from "react";
-
 import media from "../../../assets/styles/media";
 
 import {
@@ -13,7 +12,7 @@ import { eventItems } from "../../../assets/data/eventItems";
 
 export const ProfileTimeline: VFC = () => {
   return (
-    <SProfileTimelineContainer>
+    <SComponentContainer>
       <h1>History</h1>
       <VerticalTimeline>
         {eventItems.map((value) => {
@@ -34,11 +33,11 @@ export const ProfileTimeline: VFC = () => {
           );
         })}
       </VerticalTimeline>
-    </SProfileTimelineContainer>
+    </SComponentContainer>
   );
 };
 
-const SProfileTimelineContainer = styled.div`
+const SComponentContainer = styled.div`
   margin: 300px 0 50px;
   ${media.lg`
   margin: 250px 0 45px;

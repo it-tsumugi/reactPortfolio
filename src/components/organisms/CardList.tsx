@@ -14,7 +14,7 @@ export const CardList: VFC<cardListType> = (props) => {
   const { cardList, isSkillLevel, isUsedTech, isIcon, flexwrap, titleTechImg } =
     props;
   return (
-    <SCardListContainer container spacing={2} flexwrap={flexwrap}>
+    <SGrid container spacing={2} flexwrap={flexwrap}>
       {cardList.map((card) => {
         return (
           <Grid item xs={12} sm={6} md={4} lg={4} key={card.title}>
@@ -38,11 +38,11 @@ export const CardList: VFC<cardListType> = (props) => {
           </Grid>
         );
       })}
-    </SCardListContainer>
+    </SGrid>
   );
 };
 
-const SCardListContainer = styled(Grid)<{ flexwrap: string }>`
+const SGrid = styled(Grid)<{ flexwrap: string }>`
   margin: 0 auto;
   padding: 50px 0 50px;
   overflow: hidden;

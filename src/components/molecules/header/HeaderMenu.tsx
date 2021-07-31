@@ -16,7 +16,7 @@ export const HeaderMenu: VFC = () => {
     setAnchorEl(null);
   };
   return (
-    <SMenuContainer>
+    <SComponentContainer>
       <SMenuTitle>Tsumugi's PortFolio</SMenuTitle>
       <SMenuIconContainer>
         <Button
@@ -57,9 +57,17 @@ export const HeaderMenu: VFC = () => {
           CONTACT
         </MenuItem>
       </SMenu>
-    </SMenuContainer>
+    </SComponentContainer>
   );
 };
+
+const SComponentContainer = styled.div`
+  display: none;
+
+  ${media.lessThanlg`
+    display: flex;
+  `}
+`;
 
 const SMenuIconContainer = styled.div`
   margin-left: auto;
@@ -67,14 +75,6 @@ const SMenuIconContainer = styled.div`
 
 const SMenu = styled(Menu)`
   margin-top: 30px;
-`;
-
-const SMenuContainer = styled.div`
-  display: none;
-
-  ${media.lessThanlg`
-    display: flex;
-  `}
 `;
 
 const SMenuTitle = styled.p`

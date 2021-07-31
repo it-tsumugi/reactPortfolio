@@ -1,5 +1,7 @@
-import GitHub from "@material-ui/icons/GitHub";
 import { VFC } from "react";
+
+import GitHub from "@material-ui/icons/GitHub";
+
 import { iconType } from "../../../assets/Type";
 import { SBaseIcon } from "./SBaseIcon";
 

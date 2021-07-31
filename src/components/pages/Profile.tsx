@@ -9,25 +9,25 @@ import { ProfileContents } from "../organisms/profile/ProfileContents";
 
 export const Profile: VFC = () => {
   return (
-    <SProfileContainer>
+    <SComponentContainer>
       <PageTitle>PROFILE</PageTitle>
-      <SProfileContentsContainer>
+      <SProfileContainer>
         <ProfileImage />
         <ProfileContents />
         <ProfileTimeline />
         <SSNS>
           フッターにGitHub、Twitter、Qiitaのアカウントを載せています。
         </SSNS>
-      </SProfileContentsContainer>
-    </SProfileContainer>
+      </SProfileContainer>
+    </SComponentContainer>
   );
 };
 
-const SProfileContainer = styled.div`
+const SComponentContainer = styled.div`
   text-align: center;
 `;
 
-const SProfileContentsContainer = styled.div`
+const SProfileContainer = styled.div`
   width: 85vw;
   margin: 0 auto;
 

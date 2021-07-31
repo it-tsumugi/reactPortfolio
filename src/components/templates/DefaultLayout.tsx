@@ -1,24 +1,25 @@
-import { memo, VFC } from "react";
+import { VFC } from "react";
+import styled from "styled-components";
+
 import { Footer } from "../organisms/layout/Footer";
 import { Header } from "../organisms/layout/Header";
-import styled from "styled-components";
 
 type PropsType = {
   children: React.ReactElement;
 };
 
-export const DefaultLayout: VFC<PropsType> = memo((props) => {
+export const DefaultLayout: VFC<PropsType> = (props) => {
   const { children } = props;
   return (
-    <SPageContainer>
+    <SComponentContainer>
       <Header />
       {children}
       <Footer />
-    </SPageContainer>
+    </SComponentContainer>
   );
-});
+};
 
-const SPageContainer = styled.div`
+const SComponentContainer = styled.div`
   //ページ共通のスタイル
   color: white;
   background-color: #294286;

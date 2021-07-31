@@ -9,7 +9,7 @@ import { ProfileText } from "../../molecules/profile/ProfileText";
 
 export const ProfileContents: VFC = () => {
   return (
-    <SProfileContentsContainer>
+    <SComponentContainer>
       {profileItems.map((item) => {
         return (
           <SProfileItemContainer key={item.type}>
@@ -28,11 +28,11 @@ export const ProfileContents: VFC = () => {
           </SProfileItemContainer>
         );
       })}
-    </SProfileContentsContainer>
+    </SComponentContainer>
   );
 };
 
-const SProfileContentsContainer = styled.div`
+const SComponentContainer = styled.div`
   width: 100%;
   margin: 0 auto;
 `;

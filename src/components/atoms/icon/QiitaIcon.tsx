@@ -1,5 +1,7 @@
-import LibraryBooksOutlinedIcon from "@material-ui/icons/LibraryBooksOutlined";
 import { VFC } from "react";
+
+import LibraryBooksOutlinedIcon from "@material-ui/icons/LibraryBooksOutlined";
+
 import { iconType } from "../../../assets/Type";
 import { SBaseIcon } from "./SBaseIcon";
 

@@ -12,8 +12,9 @@ export const PageTitle: VFC<PropsType> = (props) => {
 };
 
 const SPageTitle = styled.h1`
-  display: none;
   text-align: center;
+
+  display: none;
   ${media.lg`
 　display:block;
 　font-size: 32px;

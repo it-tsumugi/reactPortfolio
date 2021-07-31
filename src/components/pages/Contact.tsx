@@ -6,6 +6,7 @@ import media from "../../assets/styles/media";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+
 import { PageTitle } from "../atoms/PageTitle";
 
 export const Contact: VFC = () => {
@@ -34,7 +35,7 @@ export const Contact: VFC = () => {
   };
 
   return (
-    <SContactContainer>
+    <SComponentContainer>
       <PageTitle>CONTACT</PageTitle>
       <SText>
         お気軽に下記フォームより必須事項をご記入の上ご連絡ください。
@@ -96,15 +97,16 @@ export const Contact: VFC = () => {
           送信
         </SButton>
       </form>
-    </SContactContainer>
+    </SComponentContainer>
   );
 };
 
-const SContactContainer = styled.div`
+const SComponentContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   max-width: 80vw;
   text-align: center;
+
   padding: 80px 0 0;
   ${media.lg`
   padding: 0 0 60px;

@@ -6,11 +6,11 @@ import { useHistory } from "react-router-dom";
 
 import { Tab, Tabs } from "@material-ui/core";
 
-interface headerItemType {
+type headerItemType = {
   id: number;
   route: string;
   label: string;
-}
+};
 
 const headerItem: headerItemType[] = [
   {

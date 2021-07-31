@@ -1,5 +1,7 @@
-import Desktop from "@material-ui/icons/DesktopMac";
 import { VFC } from "react";
+
+import Desktop from "@material-ui/icons/DesktopMac";
+
 import { iconType } from "../../../assets/Type";
 import { SBaseIcon } from "./SBaseIcon";
 

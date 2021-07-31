@@ -1,5 +1,7 @@
-import Twitter from "@material-ui/icons/Twitter";
 import { VFC } from "react";
+
+import Twitter from "@material-ui/icons/Twitter";
+
 import { iconType } from "../../../assets/Type";
 import { SBaseIcon } from "./SBaseIcon";
 

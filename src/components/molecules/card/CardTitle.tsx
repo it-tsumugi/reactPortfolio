@@ -13,13 +13,23 @@ type PropsType = {
 export const CardTitle: VFC<PropsType> = (props) => {
   const { title, isIcon, url } = props;
   return (
-    <STitleContainer>
+    <SComponentContainer>
       <SEmpty />
       <STitle>{title}</STitle>
       {isIcon ? <SDeskTopIcon url={url}></SDeskTopIcon> : <SEmpty />}
-    </STitleContainer>
+    </SComponentContainer>
   );
 };
+
+const SComponentContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const SEmpty = styled.div`
+  width: 30px;
+`;
 
 const STitle = styled.h2`
   margin: 5px 10px 5px 5px;
@@ -31,16 +41,6 @@ const STitle = styled.h2`
   ${media.md`
   font-size: 16px;
   `}
-`;
-
-const STitleContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const SEmpty = styled.div`
-  width: 30px;
 `;
 
 const SDeskTopIcon = styled(DesktopIcon)`
