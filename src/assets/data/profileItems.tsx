@@ -34,11 +34,6 @@ export const profileItems: profileItemsType[] = [
       "高校生の頃初めてC言語に触って以来プログラミングが好きになりました。大学では友達に誘われて競技プログラミングをのんびりやっています。中学、高校、大学と陸上部だったので、走ることは好きです。",
   },
   {
-    type: "出身",
-    text: "福井県",
-    isDetail: false,
-  },
-  {
     type: "資格",
     text: "応用情報処理試験、TOEIC最高725点",
     isDetail: false,

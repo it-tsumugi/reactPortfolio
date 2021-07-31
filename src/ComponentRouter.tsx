@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { VFC } from "react";
 
-import { DefaultLayout } from "../components/templates/DefaultLayout";
-import { Home } from "../components/pages/Home";
-import { Profile } from "../components/pages/Profile";
-import { Skill } from "../components/pages/Skill";
-import { Product } from "../components/pages/Product";
-import { Study } from "../components/pages/Study";
-import { Contact } from "../components/pages/Contact";
-import { Page404 } from "../components/pages/Page404";
+import { DefaultLayout } from "./components/templates/DefaultLayout";
+import { Home } from "./components/pages/Home";
+import { Profile } from "./components/pages/Profile";
+import { Skill } from "./components/pages/Skill";
+import { Product } from "./components/pages/Product";
+import { Study } from "./components/pages/Study";
+import { Contact } from "./components/pages/Contact";
+import { Page404 } from "./components/pages/Page404";
 
 const Path = {
   home: "/",

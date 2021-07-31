@@ -4,7 +4,7 @@ import { StylesProvider } from "@material-ui/styles";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./assets/styles/theme";
 
-import { ComponentRouter } from "./router/ComponentRouter";
+import { ComponentRouter } from "./ComponentRouter";
 
 export const App: VFC = () => {
   return (
