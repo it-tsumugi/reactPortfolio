@@ -6,44 +6,7 @@ import { useHistory } from "react-router-dom";
 
 import { Tab, Tabs } from "@material-ui/core";
 
-type headerItemType = {
-  id: number;
-  route: string;
-  label: string;
-};
-
-const headerItem: headerItemType[] = [
-  {
-    id: 1,
-    route: "/",
-    label: "HOME",
-  },
-  {
-    id: 2,
-    route: "/profile",
-    label: "PROFILE",
-  },
-  {
-    id: 3,
-    route: "/skill",
-    label: "SKILL",
-  },
-  {
-    id: 4,
-    route: "/product",
-    label: "PRODUCT",
-  },
-  {
-    id: 5,
-    route: "/study",
-    label: "STUDY",
-  },
-  {
-    id: 6,
-    route: "/contact",
-    label: "CONTACT",
-  },
-];
+import { headerItem } from "../../../assets/data/headerItem";
 
 export const HeaderTabs: VFC = () => {
   const history = useHistory();

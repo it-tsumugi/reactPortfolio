@@ -6,6 +6,7 @@ import media from "../../../assets/styles/media";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import { headerItem } from "../../../assets/data/headerItem";
 
 export const HeaderMenu: VFC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -38,24 +39,13 @@ export const HeaderMenu: VFC = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} component={Link} to="/" style={{}}>
-          HOME
-        </MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="/profile">
-          PROFILE
-        </MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="/skill">
-          SKILL
-        </MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="/product">
-          PRODUCT
-        </MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="/study">
-          STUDY
-        </MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="/contact">
-          CONTACT
-        </MenuItem>
+        {headerItem.map((val) => {
+          return (
+            <MenuItem onClick={handleClose} component={Link} to={val.route}>
+              {val.label}
+            </MenuItem>
+          );
+        })}
       </SMenu>
     </SComponentContainer>
   );
