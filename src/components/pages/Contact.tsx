@@ -12,6 +12,7 @@ import { PageTitle } from "../atoms/PageTitle";
 export const Contact: VFC = () => {
   const {
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm();
 
@@ -40,9 +41,8 @@ export const Contact: VFC = () => {
       <SText>
         お気軽に下記フォームより必須事項をご記入の上ご連絡ください。
       </SText>
-      <form className="forms" onSubmit={sendMail} id="contact-form">
+      <form onSubmit={handleSubmit(sendMail)} id="contact-form">
         <STextField
-          className="formsItem"
           variant="filled"
           label="件名(必須)"
           type="text"
@@ -53,7 +53,6 @@ export const Contact: VFC = () => {
           helperText={errors.subject && "件名を入力してください"}
         />
         <STextField
-          className="formsItem"
           variant="filled"
           label="氏名(必須)"
           type="text"
@@ -64,7 +63,6 @@ export const Contact: VFC = () => {
           helperText={errors.name && "氏名を入力してください"}
         />
         <STextField
-          className="formsItem"
           variant="filled"
           label="返信用メールアドレス(必須)"
           type="email"
@@ -76,24 +74,18 @@ export const Contact: VFC = () => {
         />
 
         <STextField
-          className="formsItem"
           variant="filled"
           label="お問い合わせ内容(必須)"
           type="text"
           fullWidth
           margin="normal"
           {...register("message", { required: true })}
-          error={Boolean(errors.body)}
-          helperText={errors.body && "お問い合わせ内容を入力して下さい。"}
+          error={Boolean(errors.message)}
+          helperText={errors.message && "お問い合わせ内容を入力して下さい。"}
           multiline
           rows="8"
         />
-        <SButton
-          className="submitButton"
-          variant="contained"
-          color="default"
-          type="submit"
-        >
+        <SButton variant="contained" color="default" type="submit">
           送信
         </SButton>
       </form>
