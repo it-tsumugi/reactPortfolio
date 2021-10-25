@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import media from "../../../assets/styles/media";
 
-import monsterBall from "../../../assets/images/monsterBall.jpg";
+import tsumugi from "../../../assets/images/tsumugi.jpg";
 
 export const ProfileImage = () => {
-  return <SImg src={monsterBall} alt="プロフィール画像" />;
+  return <SImg src={tsumugi} alt="プロフィール画像" />;
 };
 
 const SImg = styled.img`
