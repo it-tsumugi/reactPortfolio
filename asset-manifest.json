@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.js": "/reactPortfolio/static/js/main.c814ba2f.chunk.js",
-    "main.js.map": "/reactPortfolio/static/js/main.c814ba2f.chunk.js.map",
+    "main.js": "/reactPortfolio/static/js/main.fcd9ebbd.chunk.js",
+    "main.js.map": "/reactPortfolio/static/js/main.fcd9ebbd.chunk.js.map",
     "runtime-main.js": "/reactPortfolio/static/js/runtime-main.709b17d1.js",
     "runtime-main.js.map": "/reactPortfolio/static/js/runtime-main.709b17d1.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/reactPortfolio/static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.bfe7fbd3.chunk.js": "/reactPortfolio/static/js/2.bfe7fbd3.chunk.js",
-    "static/js/2.bfe7fbd3.chunk.js.map": "/reactPortfolio/static/js/2.bfe7fbd3.chunk.js.map",
+    "static/js/2.4a38f728.chunk.js": "/reactPortfolio/static/js/2.4a38f728.chunk.js",
+    "static/js/2.4a38f728.chunk.js.map": "/reactPortfolio/static/js/2.4a38f728.chunk.js.map",
     "index.html": "/reactPortfolio/index.html",
     "static/css/2.2aa38b9c.chunk.css.map": "/reactPortfolio/static/css/2.2aa38b9c.chunk.css.map",
-    "static/js/2.bfe7fbd3.chunk.js.LICENSE.txt": "/reactPortfolio/static/js/2.bfe7fbd3.chunk.js.LICENSE.txt",
+    "static/js/2.4a38f728.chunk.js.LICENSE.txt": "/reactPortfolio/static/js/2.4a38f728.chunk.js.LICENSE.txt",
     "static/media/C.b5557b32.png": "/reactPortfolio/static/media/C.b5557b32.png",
     "static/media/CUDA.cc824a87.jpg": "/reactPortfolio/static/media/CUDA.cc824a87.jpg",
+    "static/media/Frote.8141e137.png": "/reactPortfolio/static/media/Frote.8141e137.png",
     "static/media/HTML_CSS.5091f0ae.png": "/reactPortfolio/static/media/HTML_CSS.5091f0ae.png",
     "static/media/Javascript.029db7d4.png": "/reactPortfolio/static/media/Javascript.029db7d4.png",
     "static/media/React.47f23ffb.png": "/reactPortfolio/static/media/React.47f23ffb.png",
@@ -19,13 +20,13 @@
     "static/media/bookHTMLCSS1.97799b87.jpg": "/reactPortfolio/static/media/bookHTMLCSS1.97799b87.jpg",
     "static/media/bookJS1.ecb717de.jpg": "/reactPortfolio/static/media/bookJS1.ecb717de.jpg",
     "static/media/bookWeb1.93e615b5.jpg": "/reactPortfolio/static/media/bookWeb1.93e615b5.jpg",
-    "static/media/monsterBall.057effe2.jpg": "/reactPortfolio/static/media/monsterBall.057effe2.jpg",
     "static/media/progate.474c526c.png": "/reactPortfolio/static/media/progate.474c526c.png",
     "static/media/react1.46a8e2c5.jpg": "/reactPortfolio/static/media/react1.46a8e2c5.jpg",
     "static/media/react2.e8e34671.jpg": "/reactPortfolio/static/media/react2.e8e34671.jpg",
     "static/media/react3.7713b137.jpg": "/reactPortfolio/static/media/react3.7713b137.jpg",
     "static/media/react4.c7be4a36.jpg": "/reactPortfolio/static/media/react4.c7be4a36.jpg",
     "static/media/styled-components.0fefccb0.png": "/reactPortfolio/static/media/styled-components.0fefccb0.png",
+    "static/media/tsumugi.0e6fe8cb.jpg": "/reactPortfolio/static/media/tsumugi.0e6fe8cb.jpg",
     "static/media/udemyGit.e4dd3e85.png": "/reactPortfolio/static/media/udemyGit.e4dd3e85.png",
     "static/media/udemyReact1.be70ba6d.png": "/reactPortfolio/static/media/udemyReact1.be70ba6d.png",
     "static/media/udemyReact2.3c5b9fba.png": "/reactPortfolio/static/media/udemyReact2.3c5b9fba.png",
@@ -35,7 +36,7 @@
   "entrypoints": [
     "static/js/runtime-main.709b17d1.js",
     "static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.bfe7fbd3.chunk.js",
-    "static/js/main.c814ba2f.chunk.js"
+    "static/js/2.4a38f728.chunk.js",
+    "static/js/main.fcd9ebbd.chunk.js"
   ]
 }
