@@ -64,7 +64,12 @@ export const eventItems: eventItemsType[] = [
   },
   {
     date: "2021-7",
-    title: "技術選定を行いポートフォリオを作成",
+    title: "技術選定を行いこの自己紹介サイトを作成",
     text: "出来るだけ現場に近い技術を使いたいと思い、React、Typescript、styled-componentsなどを採用。Udemyの動画や技術書典などの技術書で勉強し、ポートフォリオを作成。",
+  },
+  {
+    date: "2021-10",
+    title: "タスク管理アプリFroteを公開",
+    text: "自分が欲しいと思ったタスク管理機能を実現したサービスを作成。LaravelとmySQLで作成したものをHerokuでデプロイし公開。",
   },
 ];

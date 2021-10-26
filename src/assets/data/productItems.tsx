@@ -6,6 +6,7 @@ import {
   materialUiImg,
 } from "../images/technic/techImages";
 import Frote from "../images/Frote.png";
+import { laravelImg, phpImg, mysqlImg } from "../images/technic/techImages";
 
 export const productItems: cardItemsType[] = [
   {
@@ -26,6 +27,14 @@ export const productItems: cardItemsType[] = [
     width: 300,
     height: 160,
     url: "https://frote.herokuapp.com/",
-    usedTechImg: [reactImg, tsImg, styledComponentsImg, materialUiImg],
+    usedTechImg: [
+      reactImg,
+      tsImg,
+      styledComponentsImg,
+      materialUiImg,
+      laravelImg,
+      phpImg,
+      mysqlImg,
+    ],
   },
 ];

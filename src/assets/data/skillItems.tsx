@@ -11,8 +11,11 @@ import {
   javaImg,
   cudacImg,
   verilogImg,
+  phpImg,
+  mysqlImg,
 } from "..//images/technic/techImages";
 import { gitImg } from "../images/study/studyImges";
+import { laravelImg } from "../images/technic/techImages";
 
 export const skillItems: cardItemsType[] = [
   {
@@ -51,6 +54,36 @@ export const skillItems: cardItemsType[] = [
     img: materialUiImg,
     name: "material-ui",
     width: 160,
+    height: 160,
+    rate: 2,
+    usedTechImg: [""],
+  },
+  {
+    title: "Laravel",
+    text: "apiサーバーとしてバックエンドを使う際にルーティングやDB操作などのコストを下げるために導入しました。MVCアーキテクチャはあまり好きではないです。",
+    img: laravelImg,
+    name: "laravel",
+    width: 200,
+    height: 160,
+    rate: 2,
+    usedTechImg: [""],
+  },
+  {
+    title: "PHP",
+    text: "バックエンドの言語として学習しましたが、laravelの機能が強すぎてあまり素で使う機会はありませんでした。",
+    img: phpImg,
+    name: "php",
+    width: 200,
+    height: 160,
+    rate: 1,
+    usedTechImg: [""],
+  },
+  {
+    title: "mySQL",
+    text: "基本的なSQLで基礎を学びたかったので選択しました。postgreSQLもやってみたいと思っています",
+    img: mysqlImg,
+    name: "mysql",
+    width: 200,
     height: 160,
     rate: 2,
     usedTechImg: [""],
