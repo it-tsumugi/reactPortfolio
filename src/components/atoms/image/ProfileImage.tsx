@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import media from "../../../assets/styles/media";
 
-import tsumugi from "../../../assets/images/tsumugi.jpg";
+import tsumugi from "../../../assets/images/profileImage.png";
 
 export const ProfileImage = () => {
   return <SImg src={tsumugi} alt="プロフィール画像" />;
