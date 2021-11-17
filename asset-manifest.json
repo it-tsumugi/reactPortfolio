@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/reactPortfolio/static/js/main.acacb39f.chunk.js",
-    "main.js.map": "/reactPortfolio/static/js/main.acacb39f.chunk.js.map",
+    "main.js": "/reactPortfolio/static/js/main.070ad91a.chunk.js",
+    "main.js.map": "/reactPortfolio/static/js/main.070ad91a.chunk.js.map",
     "runtime-main.js": "/reactPortfolio/static/js/runtime-main.709b17d1.js",
     "runtime-main.js.map": "/reactPortfolio/static/js/runtime-main.709b17d1.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/reactPortfolio/static/css/2.2aa38b9c.chunk.css",
@@ -20,6 +20,7 @@
     "static/media/bookHTMLCSS1.97799b87.jpg": "/reactPortfolio/static/media/bookHTMLCSS1.97799b87.jpg",
     "static/media/bookJS1.ecb717de.jpg": "/reactPortfolio/static/media/bookJS1.ecb717de.jpg",
     "static/media/bookWeb1.93e615b5.jpg": "/reactPortfolio/static/media/bookWeb1.93e615b5.jpg",
+    "static/media/introduce.119d442b.png": "/reactPortfolio/static/media/introduce.119d442b.png",
     "static/media/profileImage.a262e490.png": "/reactPortfolio/static/media/profileImage.a262e490.png",
     "static/media/progate.474c526c.png": "/reactPortfolio/static/media/progate.474c526c.png",
     "static/media/react1.46a8e2c5.jpg": "/reactPortfolio/static/media/react1.46a8e2c5.jpg",
@@ -37,6 +38,6 @@
     "static/js/runtime-main.709b17d1.js",
     "static/css/2.2aa38b9c.chunk.css",
     "static/js/2.bfe7fbd3.chunk.js",
-    "static/js/main.acacb39f.chunk.js"
+    "static/js/main.070ad91a.chunk.js"
   ]
 }
