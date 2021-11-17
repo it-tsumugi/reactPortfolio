@@ -27,7 +27,7 @@ import {
 export const studyItems: cardItemsType[] = [
   {
     title: "りあクト！ Firebaseで始めるサーバーレスReact開発",
-    text: "同文につき省略。",
+    text: "Firebaseを利用したサーバーレス開発について学びました。",
     img: bookReactImg4,
     name: "りあクト！ Firebaseで始めるサーバーレスReact開発",
     width: 160,
@@ -38,7 +38,7 @@ export const studyItems: cardItemsType[] = [
   {
     title:
       "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅲ. React応用編】",
-    text: "同文につき省略。",
+    text: "Reduxなどの状態管理ツールがどのような歴史を辿ってきたかや、useEffectなどを用いた最適化などを学びました。",
     img: bookReactImg3,
     name: "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅲ. React応用編】",
     width: 160,
@@ -49,7 +49,7 @@ export const studyItems: cardItemsType[] = [
   {
     title:
       "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅱ. React基礎編】",
-    text: "同文につき省略。",
+    text: "TypesctiptやReactの基本的な文法について学びました。",
     img: bookReactImg2,
     name: "りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅱ. React基礎編】",
     width: 160,

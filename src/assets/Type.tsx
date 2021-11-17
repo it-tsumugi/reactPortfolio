@@ -24,3 +24,8 @@ export type cardListType = {
 export type iconType = {
   url?: string;
 };
+
+export type qiitaIconType = {
+  url?: string;
+  children: string;
+};

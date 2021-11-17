@@ -23,7 +23,7 @@ export const eventItems: eventItemsType[] = [
   {
     date: "2018-02",
     title: "イギリスへ短期留学",
-    text: "三重大学での英語特別プログラムで3週間ほどイギリスへホームステイ。",
+    text: "三重大学での英語特別プログラムで１ヶ月ほどイギリスへホームステイ。",
   },
   {
     date: "2018-08",
@@ -60,7 +60,7 @@ export const eventItems: eventItemsType[] = [
   {
     date: "2021-6",
     title: "Web企業を第1志望に",
-    text: "自己分析や業界調査、企業調査をした結果、自分が作ったものが分かりやすく結果として見える職が良いと思いWeb企業を第1志望に変更。Web業界のリサーチを始める。",
+    text: "自己分析や業界調査の結果、自分が作ったものが分かりやすく結果として見える職が良いと思いWeb企業を第1志望に変更。Web業界のリサーチを始める。",
   },
   {
     date: "2021-7",
@@ -71,5 +71,10 @@ export const eventItems: eventItemsType[] = [
     date: "2021-10",
     title: "タスク管理アプリFroteを公開",
     text: "自分が欲しいと思ったタスク管理機能を実現したサービスを作成。LaravelとmySQLで作成したものをHerokuでデプロイし公開。",
+  },
+  {
+    date: "2021-11",
+    title: "アプリエンジニアとして長期インターンを開始",
+    text: "完全リモートでReact Nativeを使用したネイティブアプリ開発に参加。",
   },
 ];

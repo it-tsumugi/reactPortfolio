@@ -35,7 +35,7 @@ export const skillItems: cardItemsType[] = [
     name: "TypeScript",
     width: 160,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -55,7 +55,7 @@ export const skillItems: cardItemsType[] = [
     name: "material-ui",
     width: 160,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -65,7 +65,7 @@ export const skillItems: cardItemsType[] = [
     name: "laravel",
     width: 200,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -75,7 +75,7 @@ export const skillItems: cardItemsType[] = [
     name: "php",
     width: 200,
     height: 160,
-    rate: 1,
+    rate: 2,
     usedTechImg: [""],
   },
   {
@@ -90,12 +90,12 @@ export const skillItems: cardItemsType[] = [
   },
   {
     title: "Git",
-    text: "チーム開発には必須だと聞いたので使うようにしました。個人的なファイルも開発しているアプリケーションもGitHubで管理しています。一応Git-flowも使っています。",
+    text: "チーム開発には必須だと聞いたので使うようにしました。個人的なファイルも開発しているアプリケーションもGitHubで管理しています。",
     img: gitImg,
     name: "Git",
     width: 160,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -105,7 +105,7 @@ export const skillItems: cardItemsType[] = [
     name: "HTML CSS",
     width: 220,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -115,7 +115,7 @@ export const skillItems: cardItemsType[] = [
     name: "JavaScript",
     width: 160,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -135,7 +135,7 @@ export const skillItems: cardItemsType[] = [
     name: "C++",
     width: 160,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
   {
@@ -165,7 +165,7 @@ export const skillItems: cardItemsType[] = [
     name: "CUDA C ",
     width: 250,
     height: 160,
-    rate: 2,
+    rate: 3,
     usedTechImg: [""],
   },
 ];
