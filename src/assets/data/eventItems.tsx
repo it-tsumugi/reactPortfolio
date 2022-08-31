@@ -75,6 +75,11 @@ export const eventItems: eventItemsType[] = [
   {
     date: "2021-11",
     title: "アプリエンジニアとして長期インターンを開始",
-    text: "完全リモートでReact Nativeを使用したネイティブアプリ開発に参加。",
+    text: "株式会社SocialDogにて完全リモートでReact Nativeを使用したネイティブアプリ開発に参加。",
+  },
+  {
+    date: "2022-4",
+    title: "長期インターンを終了",
+    text: "",
   },
 ];
